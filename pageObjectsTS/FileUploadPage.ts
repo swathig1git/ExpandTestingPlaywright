@@ -1,6 +1,6 @@
 import { Locator, Page } from "playwright-core";
 
-export class DragAndDropPage{
+export class FileUploadPage{
     page: Page;
     fileInput: Locator;
     upload: Locator;
@@ -19,7 +19,7 @@ export class DragAndDropPage{
 
         const filePath = '/Users/surendratavvalu/Downloads/1.pdf'
         await this.page.setInputFiles('#fileInput', filePath);
-        
+
 
     }
 
