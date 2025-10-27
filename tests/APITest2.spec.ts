@@ -642,7 +642,7 @@ test("POST request example failure - Invalid Data", async ({ request }) => {
 
 });
 
-test("POST request example Success", async ({ request }) => {
+test("POST request Example Success", async ({ request }) => {
  const response = await request.post("https://practice.expandtesting.com/notes/api/users/register", {
     data: {
       name: "swathi playwright2",
