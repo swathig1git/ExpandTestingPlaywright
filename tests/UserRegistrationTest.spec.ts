@@ -34,7 +34,7 @@ test("Password Mismatch", async function ({ browser }: { browser: Browser }) {
 
 })
 
-test.only("Missing Fields", async function ({ browser }: { browser: Browser }) {
+test("Missing Fields", async function ({ browser }: { browser: Browser }) {
         const context = await browser.newContext();
         const page: Page = await context.newPage();
 
