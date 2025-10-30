@@ -1,0 +1,16 @@
+
+<div id="notification-box-top" xpath="1"><div class="toast m-3 fade show" role="alert" aria-live="assertive" aria-atomic="true" data-delay="10000">
+ <div class="toast-header">
+ <span class="mr-auto"><i class="fas fa-shopping-cart"></i> 8 item(s) - $1,336.00</span>
+ <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">×</span></button>
+ </div>
+ <div class="toast-body">
+ <div class="d-flex mb-3 align-items-start">
+ <img src="https://ecommerce-playground.lambdatest.io/image/cache/catalog/maza/demo/mz_poco/megastore-2/product/8-50x62.webp" class="img-thumbnail mr-2 flex-shrink-0"> <p>Success: You have added <a href="https://ecommerce-playground.lambdatest.io/index.php?route=product/product&amp;product_id=36">iPod Nano</a> to your <a href="https://ecommerce-playground.lambdatest.io/index.php?route=checkout/cart">shopping cart</a>!</p>
+ </div>
+ <div class="form-row">
+ <div class="col"><a class="btn btn-primary btn-block" href="https://ecommerce-playground.lambdatest.io/index.php?route=checkout/cart">View Cart <i class="fas fa-long-arrow-alt-right rtl-swap"></i></a></div>
+ <div class="col"><a class="btn btn-secondary btn-block" href="https://ecommerce-playground.lambdatest.io/index.php?route=checkout/checkout">Checkout <i class="fas fa-long-arrow-alt-right rtl-swap"></i></a></div>
+ </div>
+ </div>
+</div></div>
