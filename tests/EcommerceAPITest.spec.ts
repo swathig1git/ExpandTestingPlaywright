@@ -23,7 +23,7 @@ test.beforeAll(async ({browser})=>{
 })
 
 test.describe("Page Object Test Demo", async() => {
-      test.only(`Register test_01`, async({request})=>{
+      test(`Register test_01`, async({request})=>{
 
               
       const storageStatePath = 'state.json';

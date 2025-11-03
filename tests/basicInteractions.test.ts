@@ -1,6 +1,6 @@
 import {expect, test} from "@playwright/test"
 
-test.only("frames", async({page})=>{
+test("frames", async({page})=>{
     await page.goto("https://letcode.in/frame");
     const allFrames = page.frames();
     console.log("Num of frames: " + allFrames.length);
