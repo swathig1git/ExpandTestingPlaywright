@@ -2,15 +2,17 @@ import type { PlaywrightTestConfig } from "@playwright/test";
 import { defineConfig } from "@playwright/test";
 
 const config : PlaywrightTestConfig = {
-testMatch:["tests/EcommerceHomeTest.spec.ts"],
+testMatch:["tests/JSAlertConfirmPromptTest.spec.ts"],
 use: {
+    browserName:"chromium",
     headless: false,
     screenshot: "on",
-    video: "retain-on-failure",
-    baseURL:"https://ecommerce-playground.lambdatest.io/"
+    video: "off",
+    baseURL:"https://ecommerce-playground.lambdatest.io/",
+    trace:"off"
 },
-retries: 1,
-reporter:[["dot"], ["json", {
+retries: 0,
+reporter:[ ["json", {
     outputFile: "jsonReports/jsonReport.json"
 }], ["html", {
     open: "on-failure"

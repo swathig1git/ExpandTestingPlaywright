@@ -11,5 +11,11 @@ node_modules/
 /partialScreenshot.png/
 /screenshot.png/
 /tests/MoreValidations.spec.js-snapshots/
+/uploadFiles/
+/e2e/
+/eslint.config.mts/
+/state.json/
+/jsonReports/
+/pageObjectsTS/junk1/
 .env
 .DS_Store
