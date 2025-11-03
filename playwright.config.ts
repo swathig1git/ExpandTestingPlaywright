@@ -2,7 +2,7 @@ import type { PlaywrightTestConfig } from "@playwright/test";
 import { defineConfig } from "@playwright/test";
 
 const config : PlaywrightTestConfig = {
-testMatch:["tests/JSAlertConfirmPromptTest.spec.ts"],
+testMatch:["tests/**/*.spec.ts"],
 use: {
     browserName:"chromium",
     headless: false,
