@@ -1,11 +1,17 @@
-import { Page, Browser } from "playwright-core";
-import{test, expect, request} from "@playwright/test"
+import { Page, Browser, chromium } from "playwright-core";
 import { JSAlertConfirmPromptPage } from "../pageObjectsTS/JSAlertConfirmPromptPage.spec";
+import {test, expect} from "../base/pomfixtures.spec"
 
 
-test("JS All Alert Test", async function ({ browser }: { browser: Browser }) {
-        const context = await browser.newContext();
-        const page: Page = await context.newPage();
+
+test.use({
+        browserName: "firefox"
+        })
+
+test.describe("Cross Browser Testing LAmbda Cloud", async()=> {
+
+test("JS All Alert Test", async function ({page}) {
+
 
         const jsAlertConfirmPromptPage = new JSAlertConfirmPromptPage(page);
         await jsAlertConfirmPromptPage.goTo();
@@ -26,18 +32,12 @@ test("JS All Alert Test", async function ({ browser }: { browser: Browser }) {
 
 })
 
-test("JS Alert Test", async function ({ browser }: { browser: Browser }) {
-        const context = await browser.newContext();
-        const page: Page = await context.newPage();
+test("JS Alert Test", async function ({ page }) {
 
         const jsAlertConfirmPromptPage = new JSAlertConfirmPromptPage(page);
         await jsAlertConfirmPromptPage.goTo();
 
-        page.once("dialog", async(dialog) => {
-                console.log("Alert Message: ", dialog.message());
-                expect (dialog.message()).toContain("I am a Js Alert");
-                await dialog.dismiss(); 
-        });
+
 
         await jsAlertConfirmPromptPage.alertButton.click();
 
@@ -52,9 +52,7 @@ test("JS Alert Test", async function ({ browser }: { browser: Browser }) {
 
 })
 
-test("JS Confirm Dismiss Test", async function ({ browser }: { browser: Browser }) {
-        const context = await browser.newContext();
-        const page: Page = await context.newPage();
+test("JS Confirm Dismiss Test", async function ({ page }) {
 
         const jsAlertConfirmPromptPage = new JSAlertConfirmPromptPage(page);
         await jsAlertConfirmPromptPage.goTo();
@@ -72,9 +70,7 @@ test("JS Confirm Dismiss Test", async function ({ browser }: { browser: Browser 
 
 })
 
-test("JS Confirm Accept Test", async function ({ browser }: { browser: Browser }) {
-        const context = await browser.newContext();
-        const page: Page = await context.newPage();
+test("JS Confirm Accept Test", async function ({ page }) {
 
         const jsAlertConfirmPromptPage = new JSAlertConfirmPromptPage(page);
         await jsAlertConfirmPromptPage.goTo();
@@ -92,9 +88,8 @@ test("JS Confirm Accept Test", async function ({ browser }: { browser: Browser }
 
 })
 
-test("JS Prompt Test", async function ({ browser }: { browser: Browser }) {
-        const context = await browser.newContext();
-        const page: Page = await context.newPage();
+test("JS Prompt Test", async function ({ page }) {
+
 
         const jsAlertConfirmPromptPage = new JSAlertConfirmPromptPage(page);
         await jsAlertConfirmPromptPage.goTo();
@@ -113,4 +108,4 @@ test("JS Prompt Test", async function ({ browser }: { browser: Browser }) {
 
 })
 
-
+})

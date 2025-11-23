@@ -1,7 +1,7 @@
 {
   "config": {
     "configFile": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/playwright.config.ts",
-    "rootDir": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright",
+    "rootDir": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -39,46 +39,14 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 1
         },
-        "id": "chromium",
-        "name": "chromium",
-        "testDir": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright",
+        "id": "",
+        "name": "",
+        "testDir": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests",
         "testIgnore": [],
         "testMatch": [
-          "tests/JSAlertConfirmPromptTest.spec.ts"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 2
-        },
-        "id": "firefox",
-        "name": "firefox",
-        "testDir": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright",
-        "testIgnore": [],
-        "testMatch": [
-          "tests/JSAlertConfirmPromptTest.spec.ts"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 2
-        },
-        "id": "webkit",
-        "name": "webkit",
-        "testDir": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright",
-        "testIgnore": [],
-        "testMatch": [
-          "tests/JSAlertConfirmPromptTest.spec.ts"
+          "SaksTests/SaksProductDisplayTests.spec.ts"
         ],
         "timeout": 30000
       }
@@ -92,127 +60,39 @@
   },
   "suites": [
     {
-      "title": "tests/JSAlertConfirmPromptTest.spec.ts",
-      "file": "tests/JSAlertConfirmPromptTest.spec.ts",
+      "title": "SaksProductDisplayTests.spec.ts",
+      "file": "SaksProductDisplayTests.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "JS All Alert Test",
+          "title": "Product Display Different Size Verification",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
+              "projectId": "",
+              "projectName": "",
               "results": [
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11345,
+                  "duration": 31515,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Alert Message:  I am a Js Alert\n"
-                    },
-                    {
-                      "text": "Alert Message:  I am a Js Confirm\n"
-                    },
-                    {
-                      "text": "Alert Message:  I am a Js prompt\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-11-02T15:23:39.286Z",
+                  "startTime": "2025-11-23T04:23:48.853Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-All-Alert-Test-chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            },
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 13294,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Alert Message:  I am a Js Alert\n"
-                    },
-                    {
-                      "text": "Alert Message:  I am a Js Confirm\n"
-                    },
-                    {
-                      "text": "Alert Message:  I am a Js prompt\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:23:39.280Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-All-Alert-Test-firefox/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            },
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 10605,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Alert Message:  I am a Js Alert\n"
-                    },
-                    {
-                      "text": "Alert Message:  I am a Js Confirm\n"
-                    },
-                    {
-                      "text": "Alert Message:  I am a Js prompt\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:24:36.451Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-All-Alert-Test-webkit/test-finished-1.png"
+                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayTests-Pr-5d77d-Different-Size-Verification/test-finished-1.png"
                     }
                   ]
                 }
@@ -220,609 +100,19 @@
               "status": "expected"
             }
           ],
-          "id": "130e5ea5247b72c36dd6-4072c6197a1bda030cb9",
-          "file": "tests/JSAlertConfirmPromptTest.spec.ts",
-          "line": 6,
-          "column": 5
-        },
-        {
-          "title": "JS Alert Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 9496,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Alert Message:  I am a Js Alert\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:23:51.583Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Alert-Test-chromium/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Alert-Test-chromium/test-finished-2.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            },
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 16481,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Alert Message:  I am a Js Alert\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:23:54.905Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Alert-Test-firefox/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Alert-Test-firefox/test-finished-2.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            },
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 9696,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Alert Message:  I am a Js Alert\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:24:47.790Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Alert-Test-webkit/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Alert-Test-webkit/test-finished-2.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "130e5ea5247b72c36dd6-4f28d283382e5b1e27ad",
-          "file": "tests/JSAlertConfirmPromptTest.spec.ts",
-          "line": 29,
-          "column": 5
-        },
-        {
-          "title": "JS Confirm Dismiss Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 9055,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Confirm Message:  I am a Js Confirm\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:24:01.113Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Dismiss-Test-chromium/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Dismiss-Test-chromium/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Dismiss-Test-chromium/test-finished-3.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            },
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 18925,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Confirm Message:  I am a Js Confirm\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:24:11.718Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Dismiss-Test-firefox/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Dismiss-Test-firefox/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Dismiss-Test-firefox/test-finished-3.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            },
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 5716,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Confirm Message:  I am a Js Confirm\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:24:57.503Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Dismiss-Test-webkit/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Dismiss-Test-webkit/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Dismiss-Test-webkit/test-finished-3.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "130e5ea5247b72c36dd6-3efbfe50c798d650faa0",
-          "file": "tests/JSAlertConfirmPromptTest.spec.ts",
-          "line": 55,
-          "column": 5
-        },
-        {
-          "title": "JS Confirm Accept Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 9991,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Confirm Message:  I am a Js Confirm\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:24:10.201Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-chromium/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-chromium/test-finished-3.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-chromium/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-chromium/test-finished-4.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            },
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 10117,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Confirm Message:  I am a Js Confirm\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:24:30.694Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-firefox/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-firefox/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-firefox/test-finished-3.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-firefox/test-finished-4.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            },
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 6372,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Confirm Message:  I am a Js Confirm\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:25:03.231Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-webkit/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-webkit/test-finished-3.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-webkit/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Confirm-Accept-Test-webkit/test-finished-4.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "130e5ea5247b72c36dd6-10b083accd3a8a6886ce",
-          "file": "tests/JSAlertConfirmPromptTest.spec.ts",
-          "line": 75,
-          "column": 5
-        },
-        {
-          "title": "JS Prompt Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 11210,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Prompt Message:  I am a Js prompt\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:24:20.226Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-chromium/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-chromium/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-chromium/test-finished-3.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-chromium/test-finished-4.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-chromium/test-finished-5.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            },
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 10672,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Prompt Message:  I am a Js prompt\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:24:40.846Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-firefox/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-firefox/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-firefox/test-finished-3.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-firefox/test-finished-4.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-firefox/test-finished-5.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            },
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 6770,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Prompt Message:  I am a Js prompt\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-02T15:25:09.618Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-webkit/test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-webkit/test-finished-3.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-webkit/test-finished-2.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-webkit/test-finished-4.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/tests-JSAlertConfirmPromptTest-JS-Prompt-Test-webkit/test-finished-5.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "130e5ea5247b72c36dd6-d0e4b4bf28d84b1d281b",
-          "file": "tests/JSAlertConfirmPromptTest.spec.ts",
-          "line": 95,
-          "column": 5
+          "id": "e6da1663279a08d1f334-d2e00c9c19200d5d6654",
+          "file": "SaksProductDisplayTests.spec.ts",
+          "line": 37,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-11-02T15:23:38.269Z",
-    "duration": 98570.98,
-    "expected": 15,
+    "startTime": "2025-11-23T04:23:47.957Z",
+    "duration": 32478.84,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
