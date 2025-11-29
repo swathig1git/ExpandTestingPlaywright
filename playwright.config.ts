@@ -50,7 +50,7 @@ const config : PlaywrightTestConfig = {
 // ],
 testDir: './SaksTests',
 //testMatch:["SaksTests/SaksDesignerBrandListTests.spec.ts"],
-testMatch:["SaksTests/SaksProductDisplayTests.spec.ts"],
+testMatch:["SaksTests/*.spec.ts"],
 
 
 use: {

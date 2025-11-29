@@ -1,71 +1,97 @@
 import { test as baseTest, Page } from "@playwright/test";
 import { chromium } from "playwright";
 
-const test = baseTest.extend<{ page: Page }>({
-  page: async ({}, use, testInfo) => {
+const test = baseTest.extend<{
+  page: Page;
+  popUpOver: { value: boolean };
+}>({
+  // ---------- shared flag fixture ----------
+  popUpOver: async ({}, use) => {
+    const flag = { value: false };   // initial = false
+    await use(flag);
+  },
+
+  // ---------- page fixture ----------
+  page: async ({ popUpOver }, use) => {
     const browser = await chromium.launch({
       headless: false,
       args: [
-        '--start-maximized',          // Reliable maximized/full-like on macOS
-        '--disable-web-security',     // Helps with macOS sandbox/fullscreen quirks
-        // '--start-fullscreen',      // Uncomment if you want to test it again, but expect issues
+        '--start-maximized',
       ],
     });
 
     const context = await browser.newContext({
-      viewport: null,  // Essential: disables fixed viewport for full expansion
+      viewport: null,
     });
 
     const page = await context.newPage();
 
-    // Post-launch maximization (enforces on macOS if flag fails)
     await page.evaluate(() => {
       window.moveTo(0, 0);
       window.resizeTo(screen.availWidth, screen.availHeight);
-      if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen().catch(() => {});  // Fallback to browser fullscreen
-      }
+      document.documentElement.requestFullscreen?.().catch(() => {});
     });
 
-   await page.goto('https://www.saksfifthavenue.com/'); 
+    await page.goto("https://www.saksfifthavenue.com/");
 
-    //const shopCanadaButton = page.locator("//button[text() = 'SHOP SAKS CANADA']");
-    // Start your test immediately — no upfront waiting!
-    //await use(page);
-    // In parallel: if the popup ever appears in the next 30 seconds, click it
-    // await shopCanadaButton.waitFor({ state: "visible", timeout: 60000 })
-    //                 .then(async () => {
-    //                                   await shopCanadaButton.click();
-    //                                   console.log("Canada popup appeared later → clicked!");
-    //                     })
-    //                 .catch(() => {
-    //                               // never appeared — totally fine
-    //                       });
+    await page.addInitScript(() => {
+  // Kill OneTrust before it initializes
+  Object.defineProperty(window, 'OnetrustActiveGroups', { value: '', writable: false });
+  Object.defineProperty(window, 'OptanonActiveGroups', { value: '', writable: false });
 
-    // try {
-    //   await shopCanadaButton.waitFor({ state: "visible", timeout: 8000 });
-    //   await shopCanadaButton.click();
-    //   console.log("Popup appeared and OK clicked");
-    // } catch {
-    //   console.log("Popup did not appear, continuing");
-    // }
+  // Override the init function
+  (window as any).Optanon = { ToggleInfoDisplay: () => {} };
+  (window as any).OneTrust = { RejectAll: () => {} };
+
+  // Remove banner if it somehow appears
+  const removeBanner = () => {
+    document.querySelector('#onetrust-consent-sdk')?.remove();
+    document.querySelector('#onetrust-banner-sdk')?.remove();
+  };
+  removeBanner();
+  new MutationObserver(removeBanner).observe(document, { childList: true, subtree: true });
+});
+
 
     const shopCanadaButton = page.locator("//button[text() = 'SHOP SAKS CANADA']");
-    // Start your test immediately — no upfront waiting!
+    const rejectCookiesButton = page.locator("//button[@id='onetrust-reject-all-handler']");
+    let shopClicked = false;
+    let cookieClicked = false;
 
+
+
+    // Non-blocking watcher for the popup
     (async () => {
+      try {
+        while (true) {
+          if (page.isClosed()) return;
 
-    while (true) {
-        if (await shopCanadaButton.isVisible({ timeout: 0 })) {
-          await shopCanadaButton.click();
-          break;
+          const visibleShopCanada = await shopCanadaButton.isVisible().catch(() => false);
+          const visibleRejectCookies = await rejectCookiesButton.isVisible().catch(() => false);
+          if (visibleShopCanada) {
+            await shopCanadaButton.click().catch(() => {});
+            popUpOver.value = true;
+            shopClicked = true;
+          }
+          if (visibleRejectCookies) {
+            await rejectCookiesButton.click().catch(() => {});
+            //await rejectCookiesButton.evaluate((el: HTMLElement) => el.click()).catch(() => {});
+
+
+          if(shopClicked && cookieClicked){
+            return;
+
+          }
+
+          await page.waitForTimeout(200).catch(() => {});
         }
-        //console.log("waiting");
-        await page.waitForTimeout(200); // small poll, not blocking
+      }} catch {
+        // Swallow any late errors when closing
       }
     })();
+
     await use(page);
-    // Cleanup
+
     await context.close();
     await browser.close();
   },

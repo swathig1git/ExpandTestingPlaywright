@@ -13,6 +13,11 @@ export class SaksProductDisplayPage {
   incrementButton: Locator;
   miniCart: Locator;
   stockQtyExceeded: Locator;
+  productImage: Locator;
+  buttons: Locator;
+  buttonImages: Locator;
+  previousImageButton: Locator;
+  nextImageButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -27,6 +32,11 @@ export class SaksProductDisplayPage {
     this.incrementButton = page.locator("//button[@data-testid='increment-btn']")
     this.miniCart = page.locator("//div[@class='MiniCart__title']")
     this.stockQtyExceeded = page.locator("//div[@id='STATUSCODE_STOCK_QUANTITY_EXCEEDED']");
+    this.productImage = page.locator("//div[contains(@class,'ProductCarousel__small')]//div[@data-index='4']//img");
+    this.buttons = page.locator("//div[contains(@class,'ProductCarousel__small')]//button[not(contains(@class, 'slick-arrow'))]");
+    this.previousImageButton = page.locator("//div[contains(@class,'ProductCarousel__small')]//button[contains(@class,'slick-prev')]");
+    this.nextImageButton = page.locator("//div[contains(@class,'ProductCarousel__small')]//button[contains(@class,'slick-next')]");
+    this.buttonImages = page.locator("//div[contains(@class,'ProductCarousel__small')]//button[not(contains(@class, 'slick-arrow'))]//img");
 
   }
 

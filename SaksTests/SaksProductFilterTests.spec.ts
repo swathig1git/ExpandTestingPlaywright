@@ -6,7 +6,7 @@ import { SaksProductDisplayPage } from '../SaksPageObjects/SaksProductDisplayPag
 import { test } from '../base/fixtureSaks.spec';
 import {isGreenShade} from '../SaksUtils/colorUtils'
 
-test('Product Colour Filter Verification', async ({ page }) => {
+test('Womens: Product Colour Filter Verification', async ({ page }) => {
   test.setTimeout(120000); // 120 seconds
   const saksHomePage = new SaksHomePage(page);
   await saksHomePage.clothingDropdown.click();
@@ -62,12 +62,35 @@ if (!hasGreenShade) {
   await page.pause();
 });
 
+test.only('Womens: Product Designer Filter Verification', async ({ page }) => {
+  await page.goto("https://ca.saks.com/en-ca/women/clothing");
+  const saksProductFilterPage = new SaksProductFilterPage(page);
+  await saksProductFilterPage.designerFilter.click();
+  let brandNameFromDesignerFilter = await saksProductFilterPage.designerOptions.nth(0).textContent();
+  await saksProductFilterPage.designerOptions.nth(0).click();
+  await expect(page).toHaveURL(/brand/);
+  //We are scrolling here only to make sure that products are visibile. This has nothing to with the test
+  await saksProductFilterPage.onlyAtSaks.scrollIntoViewIfNeeded();
+  await saksProductFilterPage.productCards.nth(0).waitFor({ state: 'visible', timeout: 25000 });
+  for (let i=0; i<10; i++){
 
-test('Product Designer Drop down Verification', async ({ page }) => {
+    if((i+1) % 4 == 0)
+      await page.evaluate(() => window.scrollBy(0, window.innerHeight));
+    await saksProductFilterPage.productCards.nth(i).scrollIntoViewIfNeeded();
+    await saksProductFilterPage.productCards.nth(i).waitFor({ state: 'visible', timeout: 25000 });
+    let brandNameOfProduct = await saksProductFilterPage.brandName.nth(i).textContent();
+    console.log("brandNameFromDesignerFilter= ", brandNameFromDesignerFilter, " brandNameOfProduct: ", brandNameOfProduct);
+    expect(brandNameFromDesignerFilter).toBe(brandNameOfProduct);
+  }
+})
+
+
+
+test('Womens: Product Designer Drop down Verification', async ({ page }) => {
   test.setTimeout(120000); // 120 seconds
   const saksHomePage = new SaksHomePage(page);
   await saksHomePage.clothingDropdown.click();
-  await expect(page).toHaveURL("https://ca.saks.com/en-ca/women/clothing");
+  await page.goto("https://ca.saks.com/en-ca/women/clothing");
   const saksProductFilterPage = new SaksProductFilterPage(page);
   await saksProductFilterPage.designerFilter.click();
   await saksProductFilterPage.designerOptions.nth(0).waitFor({ state: 'visible', timeout: 25000 });
@@ -77,14 +100,18 @@ test('Product Designer Drop down Verification', async ({ page }) => {
   expect(count).toBe(10);
 
   await saksProductFilterPage.designerViewAll.click();
-  count = await saksProductFilterPage.getAllDesignerBrands();
-  expect (count).toBe(643);
+  count = await saksProductFilterPage.getAllDesignerBrandsCount();
+
+
+  let designerButtonCount = await saksProductFilterPage.allDesignerOptions.count();
+
+    expect (count).toBe(designerButtonCount);
 
   await page.pause();
 
 });
 
-test('Product Size Filter Verification', async ({ page }) => {
+test('Womens: Product Size Filter Verification', async ({ page }) => {
   test.setTimeout(120000); // 120 seconds
   const saksHomePage = new SaksHomePage(page);
   await saksHomePage.clothingDropdown.click();

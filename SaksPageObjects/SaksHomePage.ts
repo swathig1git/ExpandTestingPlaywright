@@ -8,6 +8,7 @@ export class SaksHomePage {
   featuredDesigners: Locator;
   allFeaturedDesigners:Locator;
   clothingDropdown: Locator;
+  men: Locator;
 
   
 
@@ -21,6 +22,7 @@ export class SaksHomePage {
     this.clothingDropdown = page.locator("//a[text()='Clothing' and @aria-controls='clothing-submenu']");
   
     this.shopSaksCanada = page.locator("//button[text() = 'SHOP SAKS CANADA']");
+    this.men = page.locator("//a[text()='Men']");
   }
 
 async clickOnBrandLink(brandName: string) {

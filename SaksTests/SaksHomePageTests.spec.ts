@@ -3,7 +3,7 @@ import { expect } from '@playwright/test';
 import { SaksHomePage } from '../SaksPageObjects/SaksHomePage';
 import { test } from '../base/fixtureSaks.spec';
 
-test('Designer Drop Down Verification', async ({ page }) => {
+test('Womens: Designer Drop Down Verification', async ({ page }) => {
   const saksHomePage = new SaksHomePage(page);
 
   await saksHomePage.designerDropdown.hover();
@@ -12,8 +12,20 @@ test('Designer Drop Down Verification', async ({ page }) => {
   await expect (saksHomePage.shopAllDesigners).toBeVisible();
 });
 
-test('Designer Brand Page Opening Verification', async ({ page }) => {
-  test.setTimeout(120000); // 120 seconds
+test('Mens: Designer Drop Down Verification', async ({ page }) => {
+  const saksHomePage = new SaksHomePage(page);
+  await saksHomePage.men.click();
+
+  await expect(page).toHaveURL("https://ca.saks.com/en-ca/men");
+  await saksHomePage.designerDropdown.hover();
+  await expect(saksHomePage.featuredDesigners).toBeVisible();
+  expect (await saksHomePage.allFeaturedDesigners.count()).toBe(7);
+  await expect (saksHomePage.shopAllDesigners).toBeVisible();
+});
+
+test.only('Womens: Designer Brand Page Opening Verification', async ({ page, popUpOver }) => {
+  await expect.poll(() => popUpOver.value).toBe(true);
+  test.setTimeout(180000); // 120 seconds
   const saksHomePage = new SaksHomePage(page);
 
   await saksHomePage.designerDropdown.hover();
@@ -39,6 +51,45 @@ test('Designer Brand Page Opening Verification', async ({ page }) => {
     await expect(page).toHaveURL("https://ca.saks.com/en-ca/women/designers/" + urlName);
     await page.goBack();
     await expect(page).toHaveURL("https://ca.saks.com/en-ca/");
+    await saksHomePage.designerDropdown.hover();
+    await expect (saksHomePage.shopAllDesigners).toBeVisible();
+  }
+});
+
+test('Mens: Designer Brand Page Opening Verification', async ({ page, popUpOver }) => {
+  await expect.poll(() => popUpOver.value).toBe(true);
+  test.setTimeout(180000); // 120 seconds
+  const saksHomePage = new SaksHomePage(page);
+  await saksHomePage.men.click();
+
+  await saksHomePage.designerDropdown.hover();
+  expect (await saksHomePage.allFeaturedDesigners.count()).toBe(7);
+  await expect (saksHomePage.shopAllDesigners).toBeVisible();
+
+  const names = await saksHomePage.allFeaturedDesigners.allTextContents();
+  console.log(names);
+
+  for (const name of names) {
+    let urlName = name.toLowerCase();
+
+    urlName = urlName
+              .replace(/ \+ /g, "-")
+              .replace(/ /g, "-")   // replace all spaces with '-'
+              .replace(/'/g, "")
+              .replace(/à/g, "a")
+              .replace(/&/g, "and")
+              ;   // remove all apostrophes
+
+    console.log(urlName);
+    await saksHomePage.clickOnBrandLink(name);
+    const currentUrl = page.url();
+    expect(
+      currentUrl === `https://ca.saks.com/en-ca/men/designers/${urlName}` ||
+      currentUrl === `https://ca.saks.com/en-ca/men/clothing?brand=${urlName}`
+    ).toBeTruthy();
+
+    await page.goBack();
+    await expect(page).toHaveURL("https://ca.saks.com/en-ca/men");
     await saksHomePage.designerDropdown.hover();
     await expect (saksHomePage.shopAllDesigners).toBeVisible();
   }

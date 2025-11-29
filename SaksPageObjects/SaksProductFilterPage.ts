@@ -8,13 +8,11 @@ export class SaksProductFilterPage {
   onlyAtSaks: Locator;
   designerFilter: Locator;
   designerOptions: Locator;
+  allDesignerOptions: Locator;
   designerViewAll: Locator;
   sizeFilter: Locator;
   sizeXXSmall: Locator;
-  miniCart: Locator;
-
-
-
+  brandName: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -24,13 +22,14 @@ export class SaksProductFilterPage {
     this.onlyAtSaks = page.locator("//div[text()='Only at Saks']")
     this.designerFilter = page.locator("//div[text()='Designers']");
     this.designerOptions = page.locator("//div[text()='10 brand options']/following-sibling::div/button");
+    this.allDesignerOptions = page.locator("//div[contains(text(),'brand options')]/following-sibling::div/button")
     this.designerViewAll = page.locator("//button[text()='View All']")
     this.sizeFilter = page.locator("//div[text()='Size']");
     this.sizeXXSmall = page.locator("//button[text()='XX-Small, 00']");
-    this.miniCart = page.locator("//div[@class='MiniCart__title']")
+    this.brandName = page.locator("//div[contains(@class,'ProductCardHeader__productCardBrandName')]");
   }
 
-  async getAllDesignerBrands(){
+  async getAllDesignerBrandsCount(){
     const text = await this.page.locator("//div[@role='status' and contains(text(), 'brand options')]").innerText();
     const number = parseInt(text.replace(/\D/g, ""), 10);
     console.log(number);  // 645
@@ -39,3 +38,4 @@ export class SaksProductFilterPage {
 
   
 }
+

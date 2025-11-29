@@ -4,7 +4,7 @@ import { SaksHomePage } from '../SaksPageObjects/SaksHomePage';
 import { SaksDesignerBrandListPage } from '../SaksPageObjects/SaksDesignerBrandListPage';
 import { test } from '../base/fixtureSaks.spec';
 
-test('Designer Brand List Verification', async ({ page }) => {
+test('Womens: Designer Brand List Verification', async ({ page }) => {
   const saksHomePage = new SaksHomePage(page);
   await saksHomePage.designerDropdown.hover();
   await saksHomePage.shopAllDesigners.click();
@@ -12,7 +12,7 @@ test('Designer Brand List Verification', async ({ page }) => {
 
 });
 
-test('Designer Brand List Scroll Verification', async ({ page }) => {
+test('Womens: Designer Brand List Scroll Verification', async ({ page }) => {
   const saksHomePage = new SaksHomePage(page); 
   await saksHomePage.designerDropdown.hover();
   await saksHomePage.shopAllDesigners.click();
