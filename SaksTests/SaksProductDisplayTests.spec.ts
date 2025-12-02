@@ -6,6 +6,7 @@ import { SaksProductDisplayPage } from '../SaksPageObjects/SaksProductDisplayPag
 import { test } from '../base/fixtureSaks.spec';
 import {isGreenShade} from '../SaksUtils/colorUtils'
 
+test.describe('Saks Product Display @regression', () => {
 test('Womens: Product Display: Size, Increment-Decrement Button Verification', async ({ page }) => {
   test.setTimeout(120000); // 120 seconds
   const saksHomePage = new SaksHomePage(page);
@@ -70,8 +71,9 @@ test('Womens: Product Display: Size, Increment-Decrement Button Verification', a
 
 
 });
+})
 
-
+test.describe('Saks Home Page @regression', () => {
 test('Womens: Product Display: Image verification', async ({ page }) => {
   test.setTimeout(120000); // 120 seconds
   const saksHomePage = new SaksHomePage(page);
@@ -116,7 +118,9 @@ test('Womens: Product Display: Image verification', async ({ page }) => {
 
 
 })
+})
 
+test.describe('Saks Home Page @regression', () => {
 test('Womens: Product Display Different Size Verification', async ({ page }) => {
   test.setTimeout(120000); // 120 seconds
   const saksHomePage = new SaksHomePage(page);
@@ -158,4 +162,5 @@ test('Womens: Product Display Different Size Verification', async ({ page }) => 
   }
 
 });
+})
 

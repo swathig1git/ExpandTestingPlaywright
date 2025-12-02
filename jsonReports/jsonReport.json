@@ -60,92 +60,102 @@
   },
   "suites": [
     {
-      "title": "SaksProductFilterTests.spec.ts",
-      "file": "SaksProductFilterTests.spec.ts",
+      "title": "SaksDesignerBrandListTests.spec.ts",
+      "file": "SaksDesignerBrandListTests.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "Womens: Product Designer Filter Verification",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Saks Home Page @regression @debugging",
+          "file": "SaksDesignerBrandListTests.spec.ts",
+          "line": 16,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
+              "title": "Womens: Designer Brand List Scroll Verification",
+              "ok": false,
+              "tags": [
+                "regression",
+                "debugging"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 18995,
-                  "errors": [],
-                  "stdout": [
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
                     {
-                      "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
-                    },
-                    {
-                      "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
-                    },
-                    {
-                      "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
-                    },
-                    {
-                      "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
-                    },
-                    {
-                      "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
-                    },
-                    {
-                      "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
-                    },
-                    {
-                      "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
-                    },
-                    {
-                      "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
-                    },
-                    {
-                      "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
-                    },
-                    {
-                      "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 28809,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//div[text()=\\'j\\']')\nExpected: in viewport\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[text()=\\'j\\']')\u001b[22m\n\u001b[2m    12 × locator resolved to <div class=\"HtmlText__htmlText HtmlText__primary\">j</div>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//div[text()=\\'j\\']')\nExpected: in viewport\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[text()=\\'j\\']')\u001b[22m\n\u001b[2m    12 × locator resolved to <div class=\"HtmlText__htmlText HtmlText__primary\">j</div>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksDesignerBrandListTests.spec.ts:24:54",
+                        "location": {
+                          "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksDesignerBrandListTests.spec.ts",
+                          "column": 54,
+                          "line": 24
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 22 |\u001b[39m   designerBrandListPage\u001b[33m.\u001b[39mbrandIndexLetter_J\u001b[33m.\u001b[39mscrollIntoViewIfNeeded()\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m   designerBrandListPage\u001b[33m.\u001b[39mbrandIndexLetter_J\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m expect(designerBrandListPage\u001b[33m.\u001b[39mfirstElement_J)\u001b[33m.\u001b[39mtoBeInViewport({timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m   \u001b[36mlet\u001b[39m jTop \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m designerBrandListPage\u001b[33m.\u001b[39mfirstElement_J\u001b[33m.\u001b[39mevaluate(el \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mgetBoundingClientRect()\u001b[33m.\u001b[39mtop)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"J TOP:\"\u001b[39m\u001b[33m,\u001b[39m jTop)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   expect(jTop)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m180\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksDesignerBrandListTests.spec.ts",
+                            "column": 54,
+                            "line": 24
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//div[text()=\\'j\\']')\nExpected: in viewport\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[text()=\\'j\\']')\u001b[22m\n\u001b[2m    12 × locator resolved to <div class=\"HtmlText__htmlText HtmlText__primary\">j</div>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 22 |\u001b[39m   designerBrandListPage\u001b[33m.\u001b[39mbrandIndexLetter_J\u001b[33m.\u001b[39mscrollIntoViewIfNeeded()\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m   designerBrandListPage\u001b[33m.\u001b[39mbrandIndexLetter_J\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m expect(designerBrandListPage\u001b[33m.\u001b[39mfirstElement_J)\u001b[33m.\u001b[39mtoBeInViewport({timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m   \u001b[36mlet\u001b[39m jTop \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m designerBrandListPage\u001b[33m.\u001b[39mfirstElement_J\u001b[33m.\u001b[39mevaluate(el \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mgetBoundingClientRect()\u001b[33m.\u001b[39mtop)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"J TOP:\"\u001b[39m\u001b[33m,\u001b[39m jTop)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   expect(jTop)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m180\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksDesignerBrandListTests.spec.ts:24:54\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-02T18:39:55.726Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksDesignerBrandListTests-7b527-nd-List-Scroll-Verification/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksDesignerBrandListTests-7b527-nd-List-Scroll-Verification/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksDesignerBrandListTests.spec.ts",
+                        "column": 54,
+                        "line": 24
+                      }
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-11-29T07:07:44.423Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterTests-Wom-73acc-esigner-Filter-Verification/test-finished-1.png"
-                    }
-                  ]
+                  "status": "unexpected"
                 }
               ],
-              "status": "expected"
+              "id": "0b1f3bbb4667748c7753-973cdbb0e35bb3a5d806",
+              "file": "SaksDesignerBrandListTests.spec.ts",
+              "line": 17,
+              "column": 5
             }
-          ],
-          "id": "b5f0e6d938b6441cd676-67815ff21683993d6012",
-          "file": "SaksProductFilterTests.spec.ts",
-          "line": 65,
-          "column": 6
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-11-29T07:07:43.511Z",
-    "duration": 19975.383,
-    "expected": 1,
+    "startTime": "2025-12-02T18:39:54.596Z",
+    "duration": 30003.302,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

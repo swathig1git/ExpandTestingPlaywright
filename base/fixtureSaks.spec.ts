@@ -61,31 +61,37 @@ const test = baseTest.extend<{
 
 
     // Non-blocking watcher for the popup
+  (async () => {
+      try {
+        while (true) {
+          if (page.isClosed()) return;
+          const visibleShopCanada = await shopCanadaButton.isVisible().catch(() => false);
+          if (visibleShopCanada) {
+            await shopCanadaButton.click().catch(() => {});
+            popUpOver.value = true;
+            return;
+          }
+          await page.waitForTimeout(200).catch(() => {});
+        }
+    } catch {
+        // Swallow any late errors when closing
+            }
+  })();
+
     (async () => {
       try {
         while (true) {
           if (page.isClosed()) return;
-
-          const visibleShopCanada = await shopCanadaButton.isVisible().catch(() => false);
           const visibleRejectCookies = await rejectCookiesButton.isVisible().catch(() => false);
-          if (visibleShopCanada) {
-            await shopCanadaButton.click().catch(() => {});
-            popUpOver.value = true;
-            shopClicked = true;
-          }
           if (visibleRejectCookies) {
-            await rejectCookiesButton.click().catch(() => {});
-            //await rejectCookiesButton.evaluate((el: HTMLElement) => el.click()).catch(() => {});
-
-
-          if(shopClicked && cookieClicked){
-            return;
-
+          await rejectCookiesButton.click().catch(() => {});
+          //await rejectCookiesButton.evaluate((el: HTMLElement) => el.click()).catch(() => {});
+          return;
           }
-
           await page.waitForTimeout(200).catch(() => {});
         }
-      }} catch {
+      }
+      catch {
         // Swallow any late errors when closing
       }
     })();

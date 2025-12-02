@@ -41,17 +41,6 @@ export class SaksProductDisplayPage {
   }
 
    async isXXSSizeAvailable(): Promise<boolean> {
-        // Debug: See the actual HTML of all buttons
-        // const buttonsHtml = await this.page.$$eval('button', buttons =>
-        //     buttons.map(b => ({
-        //         outerHTML: b.outerHTML.substring(0, 200), // limit size
-        //         innerText: b.innerText,
-        //         textContent: b.textContent,
-        //         ariaLabel: b.getAttribute('aria-label')
-        //     }))
-        // );
-        //console.log('All buttons on page:', JSON.stringify(buttonsHtml, null, 2));
-        // Wait for PDP content
         await this.page.waitForSelector(
             "//button[text()='00' or text()='XX-Small']",
             { timeout: 8000 }

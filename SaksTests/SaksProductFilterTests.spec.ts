@@ -6,6 +6,7 @@ import { SaksProductDisplayPage } from '../SaksPageObjects/SaksProductDisplayPag
 import { test } from '../base/fixtureSaks.spec';
 import {isGreenShade} from '../SaksUtils/colorUtils'
 
+test.describe('Saks Home Page @regression', () => {
 test('Womens: Product Colour Filter Verification', async ({ page }) => {
   test.setTimeout(120000); // 120 seconds
   const saksHomePage = new SaksHomePage(page);
@@ -59,10 +60,11 @@ if (!hasGreenShade) {
   //expect(hasGreenShade).toBeTruthy();  // at least one of the colors must be a green shade
 }
 
-  await page.pause();
 });
+})
 
-test.only('Womens: Product Designer Filter Verification', async ({ page }) => {
+test.describe('Saks Home Page @regression', () => {
+test('Womens: Product Designer Filter Verification', async ({ page }) => {
   await page.goto("https://ca.saks.com/en-ca/women/clothing");
   const saksProductFilterPage = new SaksProductFilterPage(page);
   await saksProductFilterPage.designerFilter.click();
@@ -83,9 +85,10 @@ test.only('Womens: Product Designer Filter Verification', async ({ page }) => {
     expect(brandNameFromDesignerFilter).toBe(brandNameOfProduct);
   }
 })
+})
 
 
-
+test.describe('Saks Home Page @regression', () => {
 test('Womens: Product Designer Drop down Verification', async ({ page }) => {
   test.setTimeout(120000); // 120 seconds
   const saksHomePage = new SaksHomePage(page);
@@ -107,10 +110,10 @@ test('Womens: Product Designer Drop down Verification', async ({ page }) => {
 
     expect (count).toBe(designerButtonCount);
 
-  await page.pause();
-
 });
+})
 
+test.describe('Saks Home Page @regression', () => {
 test('Womens: Product Size Filter Verification', async ({ page }) => {
   test.setTimeout(120000); // 120 seconds
   const saksHomePage = new SaksHomePage(page);
@@ -152,5 +155,6 @@ test('Womens: Product Size Filter Verification', async ({ page }) => {
 
   
 });
+})
 
 

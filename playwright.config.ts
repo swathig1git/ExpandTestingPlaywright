@@ -1,25 +1,6 @@
 import type { PlaywrightTestConfig } from "@playwright/test";
 import { defineConfig, devices } from "@playwright/test";
 
-// LambdaTest capabilities
-// const capabilities = {
-//   browserName: "chrome", // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-//   browserVersion: "latest",
-//   "LT:Options": {
-//     platform: "Windows 10",
-//     build: "Playwright TS Build",
-//     name: "Playwright Test from config",
-//     user: "swathig12025",
-//     accessKey: "LT_k731CbMGDGpfRvXpmv1rlwL5Jrtn9LKw3V2VkitL6GPuBGp",
-//     network: true,
-//     video: true,
-//     console: true,
-//     tunnel: false, // Add tunnel configuration if testing locally hosted webpage
-//     tunnelName: "", // Optional
-//     geoLocation: '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-//   },
-// };
-
 const config : PlaywrightTestConfig = {
 
 // projects:[
