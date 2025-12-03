@@ -2,17 +2,26 @@ import { Locator, Page } from "playwright-core";
 
 export class SaksProductDisplayPage {
   readonly page: Page;
-  brandName: Locator;
+  //locators common for all items
   productName: Locator;
+  originalPrice: Locator;
+  dutiesIncluded: Locator;
+  colorOptions: Locator;
+  inputQuantity: Locator;
+  decrementButton: Locator;
+  incrementButton: Locator;
+  addToBag: Locator;
+  addToFavoritesHeart: Locator;
+  favoritesContainer: Locator;
+
+  //locators for specific types
+  brandName: Locator;
   size00: Locator;
   sizeXXS: Locator;
   sizeXS: Locator;
   brand: Locator;
-  addToBag: Locator;
   selectASize: Locator;
   plsSelectSizeMsg: Locator;
-  decrementButton: Locator;
-  incrementButton: Locator;
   miniCart: Locator;
   stockQtyExceeded: Locator;
   productImage: Locator;
@@ -27,8 +36,7 @@ export class SaksProductDisplayPage {
   menOrWomen: Locator;
   sizeGuideCategory: Locator;
   sizeGuideClose: Locator;
-  addToFavoritesHeart: Locator;
-  favoritesContainer: Locator;
+
   
 
   constructor(page: Page) {
@@ -42,8 +50,7 @@ export class SaksProductDisplayPage {
     this.addToBag = page.locator("//button[text()='Add to Bag']");
     this.selectASize = page.locator("//button[text()='Select a size']");
     this.plsSelectSizeMsg = page.locator("//div[@class='MissingOption__container']");
-    this.decrementButton= page.locator("//button[@data-testid='decrement-btn']");
-    this.incrementButton = page.locator("//button[@data-testid='increment-btn']")
+
     this.miniCart = page.locator("//div[@class='MiniCart__title']")
     this.stockQtyExceeded = page.locator("//div[@id='STATUSCODE_STOCK_QUANTITY_EXCEEDED']");
     this.productImage = page.locator("//div[contains(@class,'ProductCarousel__small')]//div[@data-index='4']//img");
@@ -60,6 +67,12 @@ export class SaksProductDisplayPage {
     this.sizeGuideClose = page.locator(".Modal__close");
     this.addToFavoritesHeart = page.locator(".AddToCart__favoriteContainer button")
     this.favoritesContainer = page.locator("a.FavoritesLink__container");
+    this.originalPrice = page.locator("[data-testid*='originalPrice']");
+    this.dutiesIncluded = page.locator("[data-testid*='promotionAdditional'] .HtmlText__htmlText");
+    this.colorOptions = page.locator("[data-testid*='color-options']");
+    this.inputQuantity = page.locator("[data-testid*='quantity-input']");
+    this.decrementButton= page.locator("[data-testid*='decrement-btn']");
+    this.incrementButton = page.locator("[data-testid*='increment-btn']")
 
   }
 async isXXSSizeAvailable(): Promise<boolean> {

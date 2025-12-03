@@ -3,7 +3,7 @@ import { expect } from '@playwright/test';
 import { test } from '../base/fixtureSaks.spec';
 
 test.describe('Saks Product Display @regression', () => {
-test('Womens: Product Display: Size, Increment-Decrement Button Verification', async ({ page, cookiePopupClosed, filters, pdp }) => {
+test('Womens: Clothing Product Display: Size, Increment-Decrement Button Verification', async ({ page, cookiePopupClosed, filters, pdp }) => {
   test.setTimeout(120000); // 120 seconds
   await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
   await page.goto("https://ca.saks.com/en-ca/women/clothing");
@@ -38,7 +38,7 @@ test('Womens: Product Display: Size, Increment-Decrement Button Verification', a
 })
 
 test.describe('Saks Product Display @regression', () => {
-test('Womens: Product Display: Atleast one size Button Verification', async ({ page, cookiePopupClosed, filters, pdp }) => {
+test('Womens:Clothing Product Display: Atleast one size Button Verification', async ({ page, cookiePopupClosed, filters, pdp }) => {
   test.setTimeout(120000); // 120 seconds
   await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
   await page.goto("https://ca.saks.com/en-ca/women/clothing");
@@ -56,7 +56,7 @@ test('Womens: Product Display: Atleast one size Button Verification', async ({ p
 })
 
 test.describe('Saks Product Display @regression', () => {
-test('Womens: Product Display: Size guide Verification', async ({ page, cookiePopupClosed, filters, pdp }) => {
+test('Womens: Clothing Product Display: Size guide Verification', async ({ page, cookiePopupClosed, filters, pdp }) => {
   test.setTimeout(120000); // 120 seconds
   await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
   await page.goto("https://ca.saks.com/en-ca/women/clothing");
@@ -79,7 +79,7 @@ test('Womens: Product Display: Size guide Verification', async ({ page, cookiePo
 })
 
 test.describe('Saks Product Display @regression', () => {
-test.only('Womens: Add to Favorites Verification', async ({ page, cookiePopupClosed, filters, pdp, favorites }) => {
+test.only('Womens: Clothing Add to Favorites Verification', async ({ page, cookiePopupClosed, filters, pdp, favorites }) => {
   test.setTimeout(120000); // 120 seconds
   await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
   await page.goto("https://ca.saks.com/en-ca/women/clothing");
@@ -111,7 +111,7 @@ test.only('Womens: Add to Favorites Verification', async ({ page, cookiePopupClo
 
 
 test.describe('Saks Product Display Page @regression', () => {
-test('Womens: Product Display: Image verification', async ({ page, filters, pdp }) => {
+test('Womens: Clothing Product Display: Image verification', async ({ page, filters, pdp }) => {
   test.setTimeout(120000); // 120 seconds
   await page.goto("https://ca.saks.com/en-ca/women/clothing");
   //We are scrolling here only to make sure that products are visibile. This has nothing to with the test

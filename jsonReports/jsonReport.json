@@ -60,27 +60,25 @@
   },
   "suites": [
     {
-      "title": "SaksProductDisplayTests.spec.ts",
-      "file": "SaksProductDisplayTests.spec.ts",
+      "title": "SaksProductDisplayCommon.spec.ts",
+      "file": "SaksProductDisplayCommon.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Saks Product Display @regression",
-          "file": "SaksProductDisplayTests.spec.ts",
-          "line": 81,
+          "title": "PDP Verification - All Product Types",
+          "file": "SaksProductDisplayCommon.spec.ts",
+          "line": 157,
           "column": 6,
           "specs": [
             {
-              "title": "Womens: Add to Favorites Verification",
+              "title": "Women Clothing → PDP works correctly",
               "ok": true,
-              "tags": [
-                "regression"
-              ],
+              "tags": [],
               "tests": [
                 {
-                  "timeout": 120000,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "",
@@ -90,14 +88,14 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 27797,
+                      "duration": 12668,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Discount closed\n"
+                          "text": "Testing: Women Clothing\n"
                         },
                         {
-                          "text": "Cookies closed\n"
+                          "text": "Discount closed\n"
                         },
                         {
                           "text": "Discount closed\n"
@@ -105,13 +103,13 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T17:07:36.982Z",
+                      "startTime": "2025-12-03T21:30:59.593Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayTests-Sa-89d96-d-to-Favorites-Verification/test-finished-1.png"
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-226e6-thing-→-PDP-works-correctly/test-finished-1.png"
                         }
                       ]
                     }
@@ -119,10 +117,816 @@
                   "status": "expected"
                 }
               ],
-              "id": "e6da1663279a08d1f334-c86d3acccf635187a4f0",
-              "file": "SaksProductDisplayTests.spec.ts",
-              "line": 82,
-              "column": 6
+              "id": "7e5dda165d1b92fc2196-1af556326f7703193930",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Men Clothing → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11717,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Men Clothing\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:31:12.295Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-13c2d-thing-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-22330c33aaea346fc5eb",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Women Dresses → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15220,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Dresses\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:31:24.032Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-8b228-esses-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-93f7bf4aabcf8a15dec8",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Women Shoes → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14507,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Shoes\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:31:39.270Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-d74ef-Shoes-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-8ab7b8ff92c237a89d6a",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Men Shoes → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13429,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Men Shoes\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:31:53.792Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-2b43b-Shoes-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-38417e3e6c06c5ca676a",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Women Handbags → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13369,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Handbags\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:32:07.244Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-e4a54-dbags-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-a068d0f685b9c7941d3d",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Women Jewellery → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16195,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Jewellery\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:32:20.653Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-81d05-llery-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-b3919cfe0487c9b2927a",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Women Accessories → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12751,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Accessories\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:32:36.869Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-aa00c-ories-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-57782b210e51d16724ad",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Men Accessories → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13316,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Men Accessories\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:32:49.637Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-4170c-ories-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-c00650b12db6ca0551de",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Women Beauty → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13533,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Beauty\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:33:02.977Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-5accf-eauty-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-bb267c6c6a7d68cb01f1",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Men Grooming → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13448,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Men Grooming\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:33:16.530Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-af355-oming-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-777d2d477ca4a2bd83b1",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Women Kids → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11425,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Kids\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:33:29.992Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-a4e63--Kids-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-5e18f2d33a6cae98befa",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Women Home → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12356,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Home\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:33:41.449Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-9e452--Home-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-06dc2902a28ea5ef36d6",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Women Gifts → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16868,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Gifts\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:33:53.820Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-e7fe9-Gifts-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-ad253374a8e56bffac01",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Men Gifts → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15804,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Men Gifts\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:34:10.727Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-69d66-Gifts-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-73aea77b2970f79f7945",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Women Sale → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13067,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Sale\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:34:26.563Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-712ba--Sale-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-fa3c4777e18d2f6b208f",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
+            },
+            {
+              "title": "Men Sale → PDP works correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16120,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Men Sale\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T21:34:39.649Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-86854--Sale-→-PDP-works-correctly/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7e5dda165d1b92fc2196-9836c8df6aba25f61315",
+              "file": "SaksProductDisplayCommon.spec.ts",
+              "line": 159,
+              "column": 9
             }
           ]
         }
@@ -131,9 +935,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-12-03T17:07:35.806Z",
-    "duration": 29051.941,
-    "expected": 1,
+    "startTime": "2025-12-03T21:30:58.729Z",
+    "duration": 237103.505,
+    "expected": 17,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
