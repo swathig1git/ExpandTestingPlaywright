@@ -30,16 +30,14 @@ test('Mens: Designer Drop Down Verification', async ({ page }) => {
 test.describe('Saks Home Page @flaky', () => {
   test.describe.configure({ retries: 2, timeout: 180_000 });
 
-  test('Womens: Designer Brand Page Opening Verification', async ({ page, popUpOver }) => {
+  test('Womens: Designer Brand Page Opening Verification', async ({ page, popUpOver, homePage }) => {
     await expect.poll(() => popUpOver.value, { timeout: 30_000 }).toBe(true);
 
-    const saksHomePage = new SaksHomePage(page);
+    await homePage.designerDropdown.hover();
+    await expect(homePage.allFeaturedDesigners).toHaveCount(10);
+    await expect(homePage.shopAllDesigners).toBeVisible();
 
-    await saksHomePage.designerDropdown.hover();
-    await expect(saksHomePage.allFeaturedDesigners).toHaveCount(10);
-    await expect(saksHomePage.shopAllDesigners).toBeVisible();
-
-    const names = await saksHomePage.allFeaturedDesigners.allTextContents();
+    const names = await homePage.allFeaturedDesigners.allTextContents();
 
     for (const name of names) {
       const urlName = name
@@ -50,7 +48,7 @@ test.describe('Saks Home Page @flaky', () => {
         .replace(/'/g, '')
         .replace(/ /g, '-');
 
-      await saksHomePage.clickOnBrandLink(name);
+      await homePage.clickOnBrandLink(name);
 
       await expect(page).toHaveURL(
         new RegExp(`https://ca\\.saks\\.com/en-ca/women/designers/${urlName}`)
@@ -59,24 +57,23 @@ test.describe('Saks Home Page @flaky', () => {
       await page.goBack();
       await expect(page).toHaveURL('https://ca.saks.com/en-ca/');
 
-      await saksHomePage.designerDropdown.hover();
-      await expect(saksHomePage.shopAllDesigners).toBeVisible();
+      await homePage.designerDropdown.hover();
+      await expect(homePage.shopAllDesigners).toBeVisible();
     }
   });
 });
 test.describe('Saks Home Page @flaky', () => {
    test.describe.configure({ retries: 2, timeout: 180_000 });
-test('Mens: Designer Brand Page Opening Verification', async ({ page, popUpOver }) => {
+test('Mens: Designer Brand Page Opening Verification', async ({ page, popUpOver, homePage }) => {
   await expect.poll(() => popUpOver.value).toBe(true);
   test.setTimeout(180000); // 120 seconds
-  const saksHomePage = new SaksHomePage(page);
-  await saksHomePage.men.click();
+  await homePage.men.click();
 
-  await saksHomePage.designerDropdown.hover();
-  expect (await saksHomePage.allFeaturedDesigners.count()).toBe(7);
-  await expect (saksHomePage.shopAllDesigners).toBeVisible();
+  await homePage.designerDropdown.hover();
+  expect (await homePage.allFeaturedDesigners.count()).toBe(7);
+  await expect (homePage.shopAllDesigners).toBeVisible();
 
-  const names = await saksHomePage.allFeaturedDesigners.allTextContents();
+  const names = await homePage.allFeaturedDesigners.allTextContents();
   console.log(names);
 
   for (const name of names) {
@@ -91,7 +88,7 @@ test('Mens: Designer Brand Page Opening Verification', async ({ page, popUpOver 
               ;   // remove all apostrophes
 
     console.log(urlName);
-    await saksHomePage.clickOnBrandLink(name);
+    await homePage.clickOnBrandLink(name);
     const currentUrl = page.url();
     expect(
       currentUrl === `https://ca.saks.com/en-ca/men/designers/${urlName}` ||
@@ -100,8 +97,8 @@ test('Mens: Designer Brand Page Opening Verification', async ({ page, popUpOver 
 
     await page.goBack();
     await expect(page).toHaveURL("https://ca.saks.com/en-ca/men");
-    await saksHomePage.designerDropdown.hover();
-    await expect (saksHomePage.shopAllDesigners).toBeVisible();
+    await homePage.designerDropdown.hover();
+    await expect (homePage.shopAllDesigners).toBeVisible();
   }
 })
 })

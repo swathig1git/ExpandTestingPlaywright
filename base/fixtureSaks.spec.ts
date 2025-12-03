@@ -1,11 +1,20 @@
 import { test as baseTest, Page } from "@playwright/test";
 import { chromium } from "playwright";
+import { SaksDesignerBrandListPage } from './../SaksPageObjects/SaksDesignerBrandListPage';
+import { SaksHomePage } from './../SaksPageObjects/SaksHomePage';
+import { SaksProductDisplayPage } from '../SaksPageObjects/SaksProductDisplayPage';
+import { SaksProductFilterPage } from '../SaksPageObjects/SaksProductFilterPage';
 
 const test = baseTest.extend<{
   page: Page;
   popUpOver: { value: boolean };
   discountPopupClosed: { value: boolean };
   cookiePopupClosed: { value: boolean };
+  homePage:SaksHomePage;
+  pdp: SaksProductDisplayPage;
+  designerList: SaksDesignerBrandListPage;
+  filters: SaksProductFilterPage;
+
 }>({
   // ---------- shared flag fixture ----------
   popUpOver: async ({}, use) => {
@@ -32,6 +41,9 @@ const test = baseTest.extend<{
         '--start-maximized',
       ],
     });
+
+
+    
 
     const context = await browser.newContext({
       viewport: null,
@@ -133,6 +145,23 @@ const test = baseTest.extend<{
     await context.close();
     await browser.close();
   },
+  // Page objects — use the custom page, keep constructor unchanged!
+  homePage: async ({ page }, use) => {
+    await use(new SaksHomePage(page));  // ← Exactly what you wanted!
+  },
+
+  designerList: async ({ page }, use) => {
+    await use(new SaksDesignerBrandListPage(page));
+  },
+
+  pdp: async ({ page }, use) => {
+    await use(new SaksProductDisplayPage(page));
+  },
+
+  filters: async ({ page }, use) => {
+    await use(new SaksProductFilterPage(page));
+  },
+
 });
 
 export { test };

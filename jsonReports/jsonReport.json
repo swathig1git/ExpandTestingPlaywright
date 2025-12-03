@@ -60,6 +60,121 @@
   },
   "suites": [
     {
+      "title": "debug-cookie.spec.ts",
+      "file": "debug-cookie.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "debug Saks geo cookies",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 220000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24379,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "=== BEFORE GOTO: Initial cookies ===\n"
+                    },
+                    {
+                      "text": "POPUP APPEARED → Manually click \"Stay on US\" and run page.evaluate again below\n"
+                    },
+                    {
+                      "text": "\n=== COOKIES AFTER PAGE LOAD (before any click) ===\n"
+                    },
+                    {
+                      "text": "saks_ew_visitor_id: 655b60f0-78db-22a2-e572-ef6537bda647 (domain: www.saksfifthavenue.com, path: /, expires: 1796262256.20232)\n"
+                    },
+                    {
+                      "text": "JSESSIONID: NGIzZGMxNDctODJhZi00YTk5LThjMmYtOGM3Mjc4NWYwNmI4 (domain: ca.saks.com, path: /, expires: -1)\n"
+                    },
+                    {
+                      "text": "ftr_ncd: 6 (domain: .saks.com, path: /, expires: 1799286145)\n"
+                    },
+                    {
+                      "text": "__kla_id: eyJjaWQiOiJaRE16TXpnek56a3RNRGc0TkMwMFpqVTBMVGs0WlRrdE5EVXpOR05qWTJGbE0yVmkifQ== (domain: ca.saks.com, path: /, expires: 1799286146.374507)\n"
+                    },
+                    {
+                      "text": "forterToken: 2a13dad7255b4677b6209f89bd880877_1764726144533__UDF43-m4_9ck_ (domain: .saks.com, path: /, expires: 1799286148)\n"
+                    },
+                    {
+                      "text": "\n=== COOKIES AFTER MANUAL DISMISS (this is what you want) ===\n"
+                    },
+                    {
+                      "text": "*** POTENTIAL GEO COOKIE: saks_ew_visitor_id: 655b60f0-78db-22a2-e572-ef6537bda647 ***\n"
+                    },
+                    {
+                      "text": "JSESSIONID: NGIzZGMxNDctODJhZi00YTk5LThjMmYtOGM3Mjc4NWYwNmI4\n"
+                    },
+                    {
+                      "text": "ftr_ncd: 6\n"
+                    },
+                    {
+                      "text": "*** POTENTIAL GEO COOKIE: __kla_id: eyJjaWQiOiJaRE16TXpnek56a3RNRGc0TkMwMFpqVTBMVGs0WlRrdE5EVXpOR05qWTJGbE0yVmkifQ== ***\n"
+                    },
+                    {
+                      "text": "forterToken: 2a13dad7255b4677b6209f89bd880877_1764726144533__UDF43-m4_9ck_\n"
+                    },
+                    {
+                      "text": "ak_bmsc: 361B322D41CA6BD3615CDBC7ACA17E57~000000000000000000000000000000~YAAQT6cQAgw+m9KaAQAAWSvg4R4QUPVGEOsxPZt4WiUjGeqsNinBlf/ZLDrsWOjuGW1stLXaU/HbIFa5TMevU1r/bKblpOEjMfoWCmgPT91FX/Qa9GD/869PQktaO8DHnhHLj/0/f4G1oPczv8tflVnxFC1cvFHs4Pra/eOhT5Kn3McG7TNz8378ljHY1fOjhaLwhPqjUHsN//FPgeA+ytAYQuiLhqh2oIB1/O+ZaUGhDIw7PWjN13RrDdvc7pvUp8mLLf4jDfnEEhZMjtHgEN9zlRA1gOPXu4rl/qjpIj5TiuS5spCslgn9nIlTTUDeI67XZVwaxIroqKI3cD+EFhP/R+84titkat5kQ8nx2q5GCYO+YG2FIAanyLoefTTu3Z4W8pRv\n"
+                    },
+                    {
+                      "text": "*** POTENTIAL GEO COOKIE: _gcl_au: 1.1.1005657497.1764726150 ***\n"
+                    },
+                    {
+                      "text": "*** POTENTIAL GEO COOKIE: _ga: GA1.1.1430257976.1764726151 ***\n"
+                    },
+                    {
+                      "text": "*** POTENTIAL GEO COOKIE: _ga_3EWH4ZGHRV: GS2.1.s1764726150$o1$g1$t1764726151$j59$l0$h1536486232 ***\n"
+                    },
+                    {
+                      "text": "test_cookie: CheckForPermission\n"
+                    },
+                    {
+                      "text": "*** POTENTIAL GEO COOKIE: _ga_Z8P8Q83ZZ1: GS2.1.s1764726151$o1$g1$t1764726151$j60$l0$h0 ***\n"
+                    },
+                    {
+                      "text": "*** POTENTIAL GEO COOKIE: _fw_crm_v: a04d7b7d-cea4-4235-fb29-626820c5c326 ***\n"
+                    },
+                    {
+                      "text": "first_session: %7B%22visits%22%3A1%2C%22start%22%3A1764726151446%2C%22last_visit%22%3A1764726151446%2C%22url%22%3A%22https%3A%2F%2Fca.saks.com%2Fen-ca%2F%22%2C%22path%22%3A%22%2Fen-ca%2F%22%2C%22referrer%22%3A%22%22%2C%22referrer_info%22%3A%7B%22host%22%3A%22%22%2C%22path%22%3A%22blank%22%2C%22protocol%22%3A%22about%3A%22%2C%22port%22%3A80%2C%22search%22%3A%22%22%2C%22query%22%3A%7B%7D%7D%2C%22search%22%3A%7B%22engine%22%3Anull%2C%22query%22%3Anull%7D%2C%22version%22%3A0.4%7D\n"
+                    },
+                    {
+                      "text": "*** POTENTIAL GEO COOKIE: __cf_bm: bcvRG6sW00DtwmICxPJw_HShYqNhBCVgYvynx8KI_DI-1764726157-1.0.1.1-oZqleMpNozgVKQ3WgIn6AcdXnvFsvLTIKUqBDCVsyD2SW31DtXS_ffvOMG1Z8Jb5DnZNDRwSqU3MimAYG21oCPXYEHpiOKadkxFoTLZ52iw ***\n"
+                    },
+                    {
+                      "text": "\n=== LOCALSTORAGE KEYS (geo-related) ===\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-12-03T01:42:18.489Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d952e5fec24b9fe1df6-0376156316711fe28c39",
+          "file": "debug-cookie.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
       "title": "SaksDesignerBrandListTests.spec.ts",
       "file": "SaksDesignerBrandListTests.spec.ts",
       "column": 0,
@@ -87,10 +202,10 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 15648,
+                      "duration": 12561,
                       "errors": [],
                       "stdout": [
                         {
@@ -99,7 +214,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:24:15.318Z",
+                      "startTime": "2025-12-03T01:42:18.500Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -123,7 +238,7 @@
         {
           "title": "Saks Home Page @regression",
           "file": "SaksDesignerBrandListTests.spec.ts",
-          "line": 16,
+          "line": 15,
           "column": 6,
           "specs": [
             {
@@ -141,10 +256,10 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 20307,
+                      "duration": 18489,
                       "errors": [],
                       "stdout": [
                         {
@@ -165,7 +280,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:24:31.027Z",
+                      "startTime": "2025-12-03T01:42:31.104Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -181,7 +296,7 @@
               ],
               "id": "0b1f3bbb4667748c7753-90ce4e8d0bcd718d85a2",
               "file": "SaksDesignerBrandListTests.spec.ts",
-              "line": 17,
+              "line": 16,
               "column": 5
             }
           ]
@@ -216,19 +331,15 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13956,
+                      "duration": 9966,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:24:15.341Z",
+                      "startTime": "2025-12-03T01:42:42.948Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -270,15 +381,15 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9057,
+                      "duration": 10346,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:24:29.340Z",
+                      "startTime": "2025-12-03T01:42:52.942Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -295,6 +406,245 @@
               "id": "5a52296ea3cdd8567aca-487824ebaa52f294ebc5",
               "file": "SaksHomePageTests.spec.ts",
               "line": 18,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Saks Home Page @flaky",
+          "file": "SaksHomePageTests.spec.ts",
+          "line": 30,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Womens: Designer Brand Page Opening Verification",
+              "ok": true,
+              "tags": [
+                "flaky"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 42775,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T01:43:03.306Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksHomePageTests-Saks-Hom-442fc-d-Page-Opening-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5a52296ea3cdd8567aca-92be9e29fcffb08bb878",
+              "file": "SaksHomePageTests.spec.ts",
+              "line": 33,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Saks Home Page @flaky",
+          "file": "SaksHomePageTests.spec.ts",
+          "line": 65,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Mens: Designer Brand Page Opening Verification",
+              "ok": false,
+              "tags": [
+                "flaky"
+              ],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12045,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts:68:3",
+                        "location": {
+                          "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts",
+                          "column": 3,
+                          "line": 68
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 66 |\u001b[39m    test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mconfigure({ retries\u001b[33m:\u001b[39m \u001b[35m2\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m180\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m test(\u001b[32m'Mens: Designer Brand Page Opening Verification'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m popUpOver\u001b[33m,\u001b[39m homePage }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m popUpOver\u001b[33m.\u001b[39mvalue)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m   test\u001b[33m.\u001b[39msetTimeout(\u001b[35m180000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 120 seconds\u001b[39m\n \u001b[90m 70 |\u001b[39m   \u001b[36mawait\u001b[39m homePage\u001b[33m.\u001b[39mmen\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts",
+                            "column": 3,
+                            "line": 68
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n\u001b[0m \u001b[90m 66 |\u001b[39m    test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mconfigure({ retries\u001b[33m:\u001b[39m \u001b[35m2\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m180\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m test(\u001b[32m'Mens: Designer Brand Page Opening Verification'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m popUpOver\u001b[33m,\u001b[39m homePage }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m popUpOver\u001b[33m.\u001b[39mvalue)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m   test\u001b[33m.\u001b[39msetTimeout(\u001b[35m180000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 120 seconds\u001b[39m\n \u001b[90m 70 |\u001b[39m   \u001b[36mawait\u001b[39m homePage\u001b[33m.\u001b[39mmen\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts:68:3\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T01:43:46.098Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksHomePageTests-Saks-Hom-d725b-d-Page-Opening-Verification/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksHomePageTests-Saks-Hom-d725b-d-Page-Opening-Verification/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts",
+                        "column": 3,
+                        "line": 68
+                      }
+                    },
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12024,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts:68:3",
+                        "location": {
+                          "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts",
+                          "column": 3,
+                          "line": 68
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 66 |\u001b[39m    test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mconfigure({ retries\u001b[33m:\u001b[39m \u001b[35m2\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m180\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m test(\u001b[32m'Mens: Designer Brand Page Opening Verification'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m popUpOver\u001b[33m,\u001b[39m homePage }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m popUpOver\u001b[33m.\u001b[39mvalue)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m   test\u001b[33m.\u001b[39msetTimeout(\u001b[35m180000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 120 seconds\u001b[39m\n \u001b[90m 70 |\u001b[39m   \u001b[36mawait\u001b[39m homePage\u001b[33m.\u001b[39mmen\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts",
+                            "column": 3,
+                            "line": 68
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n\u001b[0m \u001b[90m 66 |\u001b[39m    test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mconfigure({ retries\u001b[33m:\u001b[39m \u001b[35m2\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m180\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m test(\u001b[32m'Mens: Designer Brand Page Opening Verification'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m popUpOver\u001b[33m,\u001b[39m homePage }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m popUpOver\u001b[33m.\u001b[39mvalue)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m   test\u001b[33m.\u001b[39msetTimeout(\u001b[35m180000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 120 seconds\u001b[39m\n \u001b[90m 70 |\u001b[39m   \u001b[36mawait\u001b[39m homePage\u001b[33m.\u001b[39mmen\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts:68:3\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-12-03T01:43:59.465Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksHomePageTests-Saks-Hom-d725b-d-Page-Opening-Verification-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksHomePageTests-Saks-Hom-d725b-d-Page-Opening-Verification-retry1/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts",
+                        "column": 3,
+                        "line": 68
+                      }
+                    },
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11863,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts:68:3",
+                        "location": {
+                          "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts",
+                          "column": 3,
+                          "line": 68
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 66 |\u001b[39m    test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mconfigure({ retries\u001b[33m:\u001b[39m \u001b[35m2\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m180\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m test(\u001b[32m'Mens: Designer Brand Page Opening Verification'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m popUpOver\u001b[33m,\u001b[39m homePage }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m popUpOver\u001b[33m.\u001b[39mvalue)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m   test\u001b[33m.\u001b[39msetTimeout(\u001b[35m180000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 120 seconds\u001b[39m\n \u001b[90m 70 |\u001b[39m   \u001b[36mawait\u001b[39m homePage\u001b[33m.\u001b[39mmen\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts",
+                            "column": 3,
+                            "line": 68
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n\u001b[0m \u001b[90m 66 |\u001b[39m    test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mconfigure({ retries\u001b[33m:\u001b[39m \u001b[35m2\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m180\u001b[39m_000 })\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m test(\u001b[32m'Mens: Designer Brand Page Opening Verification'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page\u001b[33m,\u001b[39m popUpOver\u001b[33m,\u001b[39m homePage }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m popUpOver\u001b[33m.\u001b[39mvalue)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 69 |\u001b[39m   test\u001b[33m.\u001b[39msetTimeout(\u001b[35m180000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 120 seconds\u001b[39m\n \u001b[90m 70 |\u001b[39m   \u001b[36mawait\u001b[39m homePage\u001b[33m.\u001b[39mmen\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts:68:3\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 2,
+                      "startTime": "2025-12-03T01:44:12.937Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksHomePageTests-Saks-Hom-d725b-d-Page-Opening-Verification-retry2/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksHomePageTests-Saks-Hom-d725b-d-Page-Opening-Verification-retry2/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksHomePageTests.spec.ts",
+                        "column": 3,
+                        "line": 68
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5a52296ea3cdd8567aca-00035b480eb10a36b134",
+              "file": "SaksHomePageTests.spec.ts",
+              "line": 67,
               "column": 5
             }
           ]
@@ -332,7 +682,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 28490,
+                      "duration": 29104,
                       "errors": [],
                       "stdout": [
                         {
@@ -347,7 +697,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:24:38.422Z",
+                      "startTime": "2025-12-03T01:42:49.633Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -371,7 +721,7 @@
         {
           "title": "Saks Home Page @regression",
           "file": "SaksProductDisplayTests.spec.ts",
-          "line": 46,
+          "line": 42,
           "column": 6,
           "specs": [
             {
@@ -392,7 +742,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 24948,
+                      "duration": 24198,
                       "errors": [],
                       "stdout": [
                         {
@@ -407,7 +757,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:25:06.931Z",
+                      "startTime": "2025-12-03T01:43:18.760Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -423,7 +773,7 @@
               ],
               "id": "e6da1663279a08d1f334-343526319fffb87ac514",
               "file": "SaksProductDisplayTests.spec.ts",
-              "line": 47,
+              "line": 43,
               "column": 5
             }
           ]
@@ -431,7 +781,7 @@
         {
           "title": "Saks Product Display Page @regression",
           "file": "SaksProductDisplayTests.spec.ts",
-          "line": 92,
+          "line": 84,
           "column": 6,
           "specs": [
             {
@@ -452,7 +802,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 44277,
+                      "duration": 41748,
                       "errors": [],
                       "stdout": [
                         {
@@ -467,7 +817,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:25:31.892Z",
+                      "startTime": "2025-12-03T01:43:42.998Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -483,7 +833,7 @@
               ],
               "id": "e6da1663279a08d1f334-c6588470ea994b1d674b",
               "file": "SaksProductDisplayTests.spec.ts",
-              "line": 93,
+              "line": 85,
               "column": 5
             }
           ]
@@ -518,15 +868,12 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 33350,
+                      "duration": 23787,
                       "errors": [],
                       "stdout": [
-                        {
-                          "text": "Discount closed\n"
-                        },
                         {
                           "text": "Found 4 green products\n"
                         },
@@ -552,6 +899,9 @@
                           "text": "❌ Non-green product colors: [ \u001b[32m'fern'\u001b[39m ]\n"
                         },
                         {
+                          "text": "❌ Non-green product colors: [ \u001b[32m'ivy'\u001b[39m ]\n"
+                        },
+                        {
                           "text": "❌ Non-green product colors: [ \u001b[32m'nori'\u001b[39m ]\n"
                         },
                         {
@@ -563,7 +913,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:24:51.372Z",
+                      "startTime": "2025-12-03T01:44:24.786Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -587,7 +937,7 @@
         {
           "title": "Saks Home Page @regression",
           "file": "SaksProductFilterTests.spec.ts",
-          "line": 66,
+          "line": 63,
           "column": 6,
           "specs": [
             {
@@ -605,10 +955,10 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 20510,
+                      "duration": 14369,
                       "errors": [],
                       "stdout": [
                         {
@@ -646,14 +996,11 @@
                         },
                         {
                           "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Cookies closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:25:24.744Z",
+                      "startTime": "2025-12-03T01:44:48.602Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -669,7 +1016,7 @@
               ],
               "id": "b5f0e6d938b6441cd676-972b91003d55d02266ab",
               "file": "SaksProductFilterTests.spec.ts",
-              "line": 67,
+              "line": 64,
               "column": 5
             }
           ]
@@ -677,7 +1024,7 @@
         {
           "title": "Saks Home Page @regression",
           "file": "SaksProductFilterTests.spec.ts",
-          "line": 91,
+          "line": 87,
           "column": 6,
           "specs": [
             {
@@ -695,25 +1042,25 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 24436,
+                      "duration": 12400,
                       "errors": [],
                       "stdout": [
-                        {
-                          "text": "Discount closed\n"
-                        },
                         {
                           "text": "Found 10 designer options\n"
                         },
                         {
                           "text": "\u001b[33m623\u001b[39m\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:25:45.275Z",
+                      "startTime": "2025-12-03T01:45:02.990Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -729,15 +1076,15 @@
               ],
               "id": "b5f0e6d938b6441cd676-c1609955e02edde87132",
               "file": "SaksProductFilterTests.spec.ts",
-              "line": 92,
+              "line": 88,
               "column": 5
             }
           ]
         },
         {
-          "title": "Saks Home Page @regression @debugging",
+          "title": "Saks Product Filters @regression @debugging",
           "file": "SaksProductFilterTests.spec.ts",
-          "line": 116,
+          "line": 109,
           "column": 6,
           "specs": [
             {
@@ -756,10 +1103,10 @@
                   "projectName": "",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 31080,
+                      "duration": 28979,
                       "errors": [],
                       "stdout": [
                         {
@@ -804,13 +1151,13 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T00:26:09.732Z",
+                      "startTime": "2025-12-03T01:45:15.417Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterTests-Sak-a4605-ct-Size-Filter-Verification/test-finished-1.png"
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterTests-Sak-a793d-ct-Size-Filter-Verification/test-finished-1.png"
                         }
                       ]
                     }
@@ -818,9 +1165,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "b5f0e6d938b6441cd676-7c61f6e21f5eaabbb051",
+              "id": "b5f0e6d938b6441cd676-10c61a14cbb4b397fa92",
               "file": "SaksProductFilterTests.spec.ts",
-              "line": 117,
+              "line": 110,
               "column": 5
             }
           ]
@@ -830,11 +1177,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-12-03T00:24:13.957Z",
-    "duration": 146908.638,
-    "expected": 11,
+    "startTime": "2025-12-03T01:42:17.568Z",
+    "duration": 206905.212,
+    "expected": 13,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
