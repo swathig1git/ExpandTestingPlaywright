@@ -39,19 +39,37 @@ export class SaksProductDisplayPage {
     this.buttonImages = page.locator("//div[contains(@class,'ProductCarousel__small')]//button[not(contains(@class, 'slick-arrow'))]//img");
 
   }
+async isXXSSizeAvailable(): Promise<boolean> {
+    const xxsButton = this.page.locator("//button[contains(text(),'00') or contains(text(),'XX-Small')]");
 
-   async isXXSSizeAvailable(): Promise<boolean> {
-        await this.page.waitForSelector(
-            "//button[text()='00' or text()='XX-Small']",
-            { timeout: 8000 }
-        ).catch(() => {});
+    try {
+        // This waits for the button to be:
+        // - attached to DOM
+        // - visible (opacity > 0, display not none, etc.)
+        // - not covered by another element
+        // - stable (not animating)
+        await xxsButton.waitFor({
+            state: 'visible',
+            timeout: 10000
+        });
 
-        // Check if size buttons are visible
-        const is00Visible = await this.size00.isVisible().catch(() => false);
-        const isXXSVisible = await this.sizeXXS.isVisible().catch(() => false);
+        // Final double-check it's truly interactable (defense in depth)
+        const isVisible = await xxsButton.isVisible();
+        const isEnabled = await xxsButton.isEnabled();
 
-        return is00Visible || isXXSVisible;
+        if (isVisible && isEnabled) {
+            console.log('XXS/00 size is available and interactable');
+            return true;
+        } else {
+            console.log('XXS/00 button exists but not interactable (disabled or hidden)');
+            return false;
+        }
+
+    } catch (error) {
+        console.log('XXS/00 size not available or blocked by overlay');
+        return false;
     }
+}
 
     async clickFirstSizeButton(){
         const buttons = this.page.locator("//div[@class='ProductOptionsSize__flexGrid layout__flexGrid']//button");

@@ -13,10 +13,12 @@ test('Womens: Designer Brand List Verification', async ({ page }) => {
 
 });
 })
-test.describe('Saks Home Page @regression @debugging', () => {
-test('Womens: Designer Brand List Scroll Verification', async ({ page, popUpOver }) => {
-  await expect.poll(() => popUpOver.value, { timeout: 30_000 }).toBe(true);
+test.describe('Saks Home Page @regression', () => {
+test('Womens: Designer Brand List Scroll Verification', async ({ page, popUpOver, discountPopupClosed, cookiePopupClosed }) => {
   await page.goto("https://ca.saks.com/en-ca/women/designers");
+  await expect.poll(() => popUpOver.value, { timeout: 30_000 }).toBe(true);
+  await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
+
   
   const designerBrandListPage = new SaksDesignerBrandListPage(page);
   designerBrandListPage.brandIndexLetter_J.scrollIntoViewIfNeeded();

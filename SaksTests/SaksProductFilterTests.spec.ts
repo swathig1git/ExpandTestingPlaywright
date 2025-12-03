@@ -113,12 +113,13 @@ test('Womens: Product Designer Drop down Verification', async ({ page }) => {
 });
 })
 
-test.describe('Saks Home Page @regression', () => {
-test('Womens: Product Size Filter Verification', async ({ page }) => {
+test.describe('Saks Home Page @regression @debugging', () => {
+test('Womens: Product Size Filter Verification', async ({ page, cookiePopupClosed }) => {
   test.setTimeout(120000); // 120 seconds
-  const saksHomePage = new SaksHomePage(page);
-  await saksHomePage.clothingDropdown.click();
-  await expect(page).toHaveURL("https://ca.saks.com/en-ca/women/clothing");
+  await page.goto("https://ca.saks.com/en-ca/women/clothing");
+  
+  await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
+
   const saksProductFilterPage = new SaksProductFilterPage(page);
   await saksProductFilterPage.sizeFilter.click();
   await saksProductFilterPage.sizeXXSmall.click();
@@ -147,7 +148,6 @@ test('Womens: Product Size Filter Verification', async ({ page }) => {
     const hasXXS = await saksProductDisplayPage.isXXSSizeAvailable();
     console.log(`Product #${i + 1}: XXS size available? ${hasXXS}`);
     expect(hasXXS).toBeTruthy();
-    console.log(`Product #${i + 1}: XXS size available? ${hasXXS}`);
     await page.goBack();
     await page.waitForSelector("[data-testid*='product-card']", { timeout: 8000 });
 

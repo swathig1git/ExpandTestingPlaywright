@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -39,7 +39,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "",
         "name": "",
@@ -67,17 +67,16 @@
       "specs": [],
       "suites": [
         {
-          "title": "Saks Home Page @regression @debugging",
+          "title": "Saks Home Page @regression",
           "file": "SaksDesignerBrandListTests.spec.ts",
-          "line": 16,
+          "line": 7,
           "column": 6,
           "specs": [
             {
-              "title": "Womens: Designer Brand List Scroll Verification",
-              "ok": false,
+              "title": "Womens: Designer Brand List Verification",
+              "ok": true,
               "tags": [
-                "regression",
-                "debugging"
+                "regression"
               ],
               "tests": [
                 {
@@ -90,58 +89,738 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 28809,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//div[text()=\\'j\\']')\nExpected: in viewport\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[text()=\\'j\\']')\u001b[22m\n\u001b[2m    12 × locator resolved to <div class=\"HtmlText__htmlText HtmlText__primary\">j</div>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//div[text()=\\'j\\']')\nExpected: in viewport\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[text()=\\'j\\']')\u001b[22m\n\u001b[2m    12 × locator resolved to <div class=\"HtmlText__htmlText HtmlText__primary\">j</div>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksDesignerBrandListTests.spec.ts:24:54",
-                        "location": {
-                          "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksDesignerBrandListTests.spec.ts",
-                          "column": 54,
-                          "line": 24
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 22 |\u001b[39m   designerBrandListPage\u001b[33m.\u001b[39mbrandIndexLetter_J\u001b[33m.\u001b[39mscrollIntoViewIfNeeded()\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m   designerBrandListPage\u001b[33m.\u001b[39mbrandIndexLetter_J\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m expect(designerBrandListPage\u001b[33m.\u001b[39mfirstElement_J)\u001b[33m.\u001b[39mtoBeInViewport({timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m   \u001b[36mlet\u001b[39m jTop \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m designerBrandListPage\u001b[33m.\u001b[39mfirstElement_J\u001b[33m.\u001b[39mevaluate(el \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mgetBoundingClientRect()\u001b[33m.\u001b[39mtop)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"J TOP:\"\u001b[39m\u001b[33m,\u001b[39m jTop)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   expect(jTop)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m180\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
+                      "status": "passed",
+                      "duration": 15648,
+                      "errors": [],
+                      "stdout": [
                         {
-                          "location": {
-                            "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksDesignerBrandListTests.spec.ts",
-                            "column": 54,
-                            "line": 24
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//div[text()=\\'j\\']')\nExpected: in viewport\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[text()=\\'j\\']')\u001b[22m\n\u001b[2m    12 × locator resolved to <div class=\"HtmlText__htmlText HtmlText__primary\">j</div>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 22 |\u001b[39m   designerBrandListPage\u001b[33m.\u001b[39mbrandIndexLetter_J\u001b[33m.\u001b[39mscrollIntoViewIfNeeded()\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m   designerBrandListPage\u001b[33m.\u001b[39mbrandIndexLetter_J\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m expect(designerBrandListPage\u001b[33m.\u001b[39mfirstElement_J)\u001b[33m.\u001b[39mtoBeInViewport({timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m   \u001b[36mlet\u001b[39m jTop \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m designerBrandListPage\u001b[33m.\u001b[39mfirstElement_J\u001b[33m.\u001b[39mevaluate(el \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mgetBoundingClientRect()\u001b[33m.\u001b[39mtop)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"J TOP:\"\u001b[39m\u001b[33m,\u001b[39m jTop)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   expect(jTop)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m180\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksDesignerBrandListTests.spec.ts:24:54\u001b[22m"
+                          "text": "Discount closed\n"
                         }
                       ],
-                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-02T18:39:55.726Z",
+                      "startTime": "2025-12-03T00:24:15.318Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksDesignerBrandListTests-7b527-nd-List-Scroll-Verification/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksDesignerBrandListTests-7b527-nd-List-Scroll-Verification/error-context.md"
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksDesignerBrandListTests-f701f-ner-Brand-List-Verification/test-finished-1.png"
                         }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksDesignerBrandListTests.spec.ts",
-                        "column": 54,
-                        "line": 24
-                      }
+                      ]
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
-              "id": "0b1f3bbb4667748c7753-973cdbb0e35bb3a5d806",
+              "id": "0b1f3bbb4667748c7753-81d8a14cafa4877a46fc",
+              "file": "SaksDesignerBrandListTests.spec.ts",
+              "line": 8,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Saks Home Page @regression",
+          "file": "SaksDesignerBrandListTests.spec.ts",
+          "line": 16,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Womens: Designer Brand List Scroll Verification",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 20307,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
+                        },
+                        {
+                          "text": "J TOP: \u001b[33m155.96875\u001b[39m\n"
+                        },
+                        {
+                          "text": "M TOP: \u001b[33m156.1484375\u001b[39m\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T00:24:31.027Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksDesignerBrandListTests-210ff-nd-List-Scroll-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0b1f3bbb4667748c7753-90ce4e8d0bcd718d85a2",
               "file": "SaksDesignerBrandListTests.spec.ts",
               "line": 17,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SaksHomePageTests.spec.ts",
+      "file": "SaksHomePageTests.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Saks Home Page @regression",
+          "file": "SaksHomePageTests.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Womens: Designer Drop Down Verification",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 13956,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T00:24:15.341Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksHomePageTests-Saks-Hom-f320f-gner-Drop-Down-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5a52296ea3cdd8567aca-cd222427fcbda96cd391",
+              "file": "SaksHomePageTests.spec.ts",
+              "line": 7,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Saks Home Page @regression",
+          "file": "SaksHomePageTests.spec.ts",
+          "line": 17,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Mens: Designer Drop Down Verification",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 9057,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T00:24:29.340Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksHomePageTests-Saks-Hom-d6fc1-gner-Drop-Down-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5a52296ea3cdd8567aca-487824ebaa52f294ebc5",
+              "file": "SaksHomePageTests.spec.ts",
+              "line": 18,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SaksProductDisplayTests.spec.ts",
+      "file": "SaksProductDisplayTests.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Saks Product Display @regression",
+          "file": "SaksProductDisplayTests.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Womens: Product Display: Size, Increment-Decrement Button Verification",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 28490,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T00:24:38.422Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayTests-Sa-81d40-crement-Button-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e6da1663279a08d1f334-dec99149c2e9407c451e",
+              "file": "SaksProductDisplayTests.spec.ts",
+              "line": 10,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Saks Home Page @regression",
+          "file": "SaksProductDisplayTests.spec.ts",
+          "line": 46,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Womens: Product Display: Image verification",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 24948,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T00:25:06.931Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayTests-Sa-ccbf4--Display-Image-verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e6da1663279a08d1f334-343526319fffb87ac514",
+              "file": "SaksProductDisplayTests.spec.ts",
+              "line": 47,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Saks Product Display Page @regression",
+          "file": "SaksProductDisplayTests.spec.ts",
+          "line": 92,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Womens: Product Display Different Size Verification",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 44277,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T00:25:31.892Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayTests-Sa-f1dec-Different-Size-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e6da1663279a08d1f334-c6588470ea994b1d674b",
+              "file": "SaksProductDisplayTests.spec.ts",
+              "line": 93,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SaksProductFilterTests.spec.ts",
+      "file": "SaksProductFilterTests.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Saks Home Page @regression",
+          "file": "SaksProductFilterTests.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Womens: Product Colour Filter Verification",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 33350,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Found 4 green products\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
+                        },
+                        {
+                          "text": "previousCount = 60\n"
+                        },
+                        {
+                          "text": "❌ Non-green product colors: [ \u001b[32m'parakeet'\u001b[39m ]\n"
+                        },
+                        {
+                          "text": "❌ Non-green product colors: [ \u001b[32m'cloudy'\u001b[39m, \u001b[32m'seafoam'\u001b[39m ]\n"
+                        },
+                        {
+                          "text": "❌ Non-green product colors: [ \u001b[32m'charcoal'\u001b[39m ]\n"
+                        },
+                        {
+                          "text": "❌ Non-green product colors: [ \u001b[32m'fern'\u001b[39m ]\n"
+                        },
+                        {
+                          "text": "❌ Non-green product colors: [ \u001b[32m'fern'\u001b[39m ]\n"
+                        },
+                        {
+                          "text": "❌ Non-green product colors: [ \u001b[32m'nori'\u001b[39m ]\n"
+                        },
+                        {
+                          "text": "❌ Non-green product colors: [ \u001b[32m'rain'\u001b[39m, \u001b[32m'leaf'\u001b[39m ]\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T00:24:51.372Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterTests-Sak-d087f--Colour-Filter-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b5f0e6d938b6441cd676-cbf468b665c5909e011b",
+              "file": "SaksProductFilterTests.spec.ts",
+              "line": 10,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Saks Home Page @regression",
+          "file": "SaksProductFilterTests.spec.ts",
+          "line": 66,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Womens: Product Designer Filter Verification",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 20510,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
+                        },
+                        {
+                          "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
+                        },
+                        {
+                          "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
+                        },
+                        {
+                          "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
+                        },
+                        {
+                          "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
+                        },
+                        {
+                          "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
+                        },
+                        {
+                          "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
+                        },
+                        {
+                          "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
+                        },
+                        {
+                          "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
+                        },
+                        {
+                          "text": "brandNameFromDesignerFilter=  120% Lino  brandNameOfProduct:  120% Lino\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T00:25:24.744Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterTests-Sak-d1384-esigner-Filter-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b5f0e6d938b6441cd676-972b91003d55d02266ab",
+              "file": "SaksProductFilterTests.spec.ts",
+              "line": 67,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Saks Home Page @regression",
+          "file": "SaksProductFilterTests.spec.ts",
+          "line": 91,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Womens: Product Designer Drop down Verification",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 24436,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Found 10 designer options\n"
+                        },
+                        {
+                          "text": "\u001b[33m623\u001b[39m\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T00:25:45.275Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterTests-Sak-f43a1-gner-Drop-down-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b5f0e6d938b6441cd676-c1609955e02edde87132",
+              "file": "SaksProductFilterTests.spec.ts",
+              "line": 92,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Saks Home Page @regression @debugging",
+          "file": "SaksProductFilterTests.spec.ts",
+          "line": 116,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Womens: Product Size Filter Verification",
+              "ok": true,
+              "tags": [
+                "regression",
+                "debugging"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 31080,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
+                        },
+                        {
+                          "text": "XXS/00 size is available and interactable\n"
+                        },
+                        {
+                          "text": "Product #1: XXS size available? true\n"
+                        },
+                        {
+                          "text": "XXS/00 size is available and interactable\n"
+                        },
+                        {
+                          "text": "Product #2: XXS size available? true\n"
+                        },
+                        {
+                          "text": "XXS/00 size is available and interactable\n"
+                        },
+                        {
+                          "text": "Product #3: XXS size available? true\n"
+                        },
+                        {
+                          "text": "XXS/00 size is available and interactable\n"
+                        },
+                        {
+                          "text": "Product #4: XXS size available? true\n"
+                        },
+                        {
+                          "text": "XXS/00 size is available and interactable\n"
+                        },
+                        {
+                          "text": "Product #5: XXS size available? true\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-03T00:26:09.732Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterTests-Sak-a4605-ct-Size-Filter-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b5f0e6d938b6441cd676-7c61f6e21f5eaabbb051",
+              "file": "SaksProductFilterTests.spec.ts",
+              "line": 117,
               "column": 5
             }
           ]
@@ -151,11 +830,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-12-02T18:39:54.596Z",
-    "duration": 30003.302,
-    "expected": 0,
+    "startTime": "2025-12-03T00:24:13.957Z",
+    "duration": 146908.638,
+    "expected": 11,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
