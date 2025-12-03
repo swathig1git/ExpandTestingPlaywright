@@ -123,34 +123,6 @@ const PRODUCT_TYPES = [
     expectedSizeType: 'numeric', // e.g., 0, 2, 4
 },
 
-//   {
-//     name: 'Men Shoes',
-//     startFrom: 'Men > Shoes',
-//     categoryUrl: 'https://ca.saksfifthavenue.com/c/men/shoes',
-//     searchTerm: 'Common Projects Achilles',
-//     expectedSizeType: 'us-shoe', // e.g., 8, 9, 10
-//   },
-//   {
-//     name: 'Kids Clothing',
-//     startFrom: 'Kids > Girls > Clothing',
-//     categoryUrl: 'https://ca.saksfifthavenue.com/c/kids/girls/clothing',
-//     searchTerm: 'Burberry dress',
-//     expectedSizeType: 'age', // e.g., 4Y, 6Y
-//   },
-//   {
-//     name: 'Jewelry',
-//     startFrom: 'Jewelry & Accessories > Fine Jewelry',
-//     categoryUrl: 'https://ca.saksfifthavenue.com/c/jewelry-accessories/fine-jewelry',
-//     searchTerm: 'Tiffany T1 ring',
-//     expectedSizeType: 'ring', // e.g., 5, 6, 7
-//   },
-//   {
-//     name: 'Beauty',
-//     startFrom: 'Beauty',
-//     categoryUrl: 'https://ca.saksfifthavenue.com/c/beauty',
-//     searchTerm: 'La Mer Creme',
-//     expectedSizeType: 'none', // no size selector
-//   },
 ] as const;
 
 // One test, runs once per product type
@@ -170,6 +142,10 @@ test.describe('PDP Verification - All Product Types', () => {
             window.scrollTo(0, document.body.scrollHeight * 0.5); // scrolls to 50% of page height
             });
 
+      let brandName = await filters.brandName.nth(0).textContent();
+      let productName = await filters.productName.nth(0).textContent();
+      let originalPrice = await filters.originalPrice.nth(0).textContent();
+
       await filters.productCards.nth(0).waitFor({ state: 'visible', timeout: 25000 });
       await filters.productCards.nth(0).click();
       await expect(page).toHaveURL(/product/);
@@ -183,6 +159,13 @@ test.describe('PDP Verification - All Product Types', () => {
       await expect(pdp.decrementButton).toBeVisible();
       await expect(pdp.incrementButton).toBeVisible();
 
+      let pdpProductName = await pdp.productName.textContent();
+      let pdpOriginalPrice = await pdp.originalPrice.textContent();
+
+      //We are not comparing brand here, because items in Home page dont have brand
+      expect (pdpProductName).toBe(productName);
+      expect (pdpOriginalPrice).toBe(originalPrice);
+
       await page.evaluate(() => {
             window.scrollTo(0, document.body.scrollHeight * 0.5); // scrolls to 50% of page height
             });
@@ -191,52 +174,85 @@ test.describe('PDP Verification - All Product Types', () => {
       await pdp.favoritesContainer.scrollIntoViewIfNeeded();
       await expect(pdp.favoritesContainer).toBeVisible();
 
+      let pdpBrandName;
       // Specific checks based on type of products
       switch(product.name){
         case "Men Accessories":
             await expect (pdp.addToBag).toBeVisible();
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             break;
         case "Men Clothing":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             await expect (pdp.selectASize).toBeVisible();            
             break;
         case "Men Gifts":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             break;
         case "Men Grooming":
             await expect (pdp.addToBag).toBeVisible();  
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             break;          
         case "Men Sale":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             break;
         case "Men Shoes":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             await expect (pdp.selectASize).toBeVisible();  
             break;
         case "Women Accessories":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             await expect (pdp.addToBag).toBeVisible();
             break;
         case "Women Beauty":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             await expect (pdp.addToBag).toBeVisible();
             break;
         case "Women Clothing":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             await expect (pdp.selectASize).toBeVisible();  
             break;
         case "Women Dresses":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             await expect (pdp.selectASize).toBeVisible();  
             break;
         case "Women Gifts":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             break;
         case "Women Handbags":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             await expect (pdp.addToBag).toBeVisible();
             break;
         case "Women Home":
             await expect (pdp.addToBag).toBeVisible();
             break;
         case "Women Jewellery":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             await expect (pdp.addToBag).toBeVisible();
             break;
         case "Women Kids":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             break;
         case "Women Sale":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             break;
         case "Women Shoes":
+            pdpBrandName = await pdp.brandName.textContent();
+            expect (pdpBrandName).toBe(brandName);
             await expect (pdp.selectASize).toBeVisible();  
             break;
       }

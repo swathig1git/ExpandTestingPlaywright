@@ -13,6 +13,8 @@ export class SaksProductFilterPage {
   sizeFilter: Locator;
   sizeXXSmall: Locator;
   brandName: Locator;
+  productName: Locator;
+  originalPrice: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -26,7 +28,9 @@ export class SaksProductFilterPage {
     this.designerViewAll = page.locator("//button[text()='View All']")
     this.sizeFilter = page.locator("//div[text()='Size']");
     this.sizeXXSmall = page.locator("//button[text()='XX-Small, 00']");
-    this.brandName = page.locator("//div[contains(@class,'ProductCardHeader__productCardBrandName')]");
+    this.brandName = page.locator(".ProductCardHeader__productCardBrandName");
+    this.productName = page.locator(".ProductCardHeader__title");
+    this.originalPrice = page.locator("[data-testid*='originalPrice']");
   }
 
   async getAllDesignerBrandsCount(){
