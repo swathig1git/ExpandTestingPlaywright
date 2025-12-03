@@ -4,6 +4,7 @@ import { SaksDesignerBrandListPage } from './../SaksPageObjects/SaksDesignerBran
 import { SaksHomePage } from './../SaksPageObjects/SaksHomePage';
 import { SaksProductDisplayPage } from '../SaksPageObjects/SaksProductDisplayPage';
 import { SaksProductFilterPage } from '../SaksPageObjects/SaksProductFilterPage';
+import { SaksMyFavoritesPage } from "../SaksPageObjects/SaksMyFavoritesPage";
 
 const test = baseTest.extend<{
   page: Page;
@@ -14,6 +15,7 @@ const test = baseTest.extend<{
   pdp: SaksProductDisplayPage;
   designerList: SaksDesignerBrandListPage;
   filters: SaksProductFilterPage;
+  favorites: SaksMyFavoritesPage
 
 }>({
   // ---------- shared flag fixture ----------
@@ -160,6 +162,10 @@ const test = baseTest.extend<{
 
   filters: async ({ page }, use) => {
     await use(new SaksProductFilterPage(page));
+  },
+
+  favorites: async ({ page }, use) => {
+    await use(new SaksMyFavoritesPage(page));
   },
 
 });

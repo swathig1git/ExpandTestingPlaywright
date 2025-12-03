@@ -2,6 +2,8 @@ import { Locator, Page } from "playwright-core";
 
 export class SaksProductDisplayPage {
   readonly page: Page;
+  brandName: Locator;
+  productName: Locator;
   size00: Locator;
   sizeXXS: Locator;
   sizeXS: Locator;
@@ -18,9 +20,21 @@ export class SaksProductDisplayPage {
   buttonImages: Locator;
   previousImageButton: Locator;
   nextImageButton: Locator;
+  sizeContainer: Locator;
+  sizeButtons: Locator;
+  sizeGuide: Locator;
+  sizeGuideTable: Locator;
+  menOrWomen: Locator;
+  sizeGuideCategory: Locator;
+  sizeGuideClose: Locator;
+  addToFavoritesHeart: Locator;
+  favoritesContainer: Locator;
+  
 
   constructor(page: Page) {
     this.page = page;
+    this.brandName = page.locator("h3[data-testid$='brand']");
+    this.productName = page.locator("h1[data-testid$='product-name']");
     this.size00 = page.locator("//button[text()='00']");
     this.sizeXXS = page.locator("//button[text()='XX-Small']");
     this.sizeXS = page.locator("//button[@aria-label='X-Small']");
@@ -37,6 +51,15 @@ export class SaksProductDisplayPage {
     this.previousImageButton = page.locator("//div[contains(@class,'ProductCarousel__small')]//button[contains(@class,'slick-prev')]");
     this.nextImageButton = page.locator("//div[contains(@class,'ProductCarousel__small')]//button[contains(@class,'slick-next')]");
     this.buttonImages = page.locator("//div[contains(@class,'ProductCarousel__small')]//button[not(contains(@class, 'slick-arrow'))]//img");
+    this.sizeContainer = page.locator("//div[contains(@class,'ProductOptionsSize__flexGrid')]");
+    this.sizeButtons = this.sizeContainer.locator("button");
+    this.sizeGuide = page.locator(".ProductSizeGuidesVB__sizeGuideButton");
+    this.sizeGuideTable = page.locator(".ProductSizeGuidesVB__multipleTablesContainer");
+    this.menOrWomen = page.locator(".Breadcrumbs__item:first-child");
+    this.sizeGuideCategory = page.locator(".SelectableMenu__selectableMenuButton");
+    this.sizeGuideClose = page.locator(".Modal__close");
+    this.addToFavoritesHeart = page.locator(".AddToCart__favoriteContainer button")
+    this.favoritesContainer = page.locator("a.FavoritesLink__container");
 
   }
 async isXXSSizeAvailable(): Promise<boolean> {
