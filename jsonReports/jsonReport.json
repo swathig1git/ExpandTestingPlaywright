@@ -88,7 +88,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 12668,
+                      "duration": 16908,
                       "errors": [],
                       "stdout": [
                         {
@@ -103,7 +103,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:30:59.593Z",
+                      "startTime": "2025-12-03T23:19:17.625Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -138,7 +138,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 11717,
+                      "duration": 12741,
                       "errors": [],
                       "stdout": [
                         {
@@ -153,7 +153,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:31:12.295Z",
+                      "startTime": "2025-12-03T23:19:34.566Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -188,7 +188,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 15220,
+                      "duration": 13188,
                       "errors": [],
                       "stdout": [
                         {
@@ -203,7 +203,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:31:24.032Z",
+                      "startTime": "2025-12-03T23:19:47.323Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -238,7 +238,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 14507,
+                      "duration": 15415,
                       "errors": [],
                       "stdout": [
                         {
@@ -249,11 +249,14 @@
                         },
                         {
                           "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:31:39.270Z",
+                      "startTime": "2025-12-03T23:20:00.527Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -288,7 +291,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13429,
+                      "duration": 14463,
                       "errors": [],
                       "stdout": [
                         {
@@ -299,11 +302,14 @@
                         },
                         {
                           "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:31:53.792Z",
+                      "startTime": "2025-12-03T23:20:15.960Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -338,7 +344,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13369,
+                      "duration": 13733,
                       "errors": [],
                       "stdout": [
                         {
@@ -353,7 +359,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:32:07.244Z",
+                      "startTime": "2025-12-03T23:20:30.439Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -388,7 +394,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 16195,
+                      "duration": 12728,
                       "errors": [],
                       "stdout": [
                         {
@@ -399,14 +405,11 @@
                         },
                         {
                           "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Cookies closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:32:20.653Z",
+                      "startTime": "2025-12-03T23:20:44.185Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -441,7 +444,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 12751,
+                      "duration": 11665,
                       "errors": [],
                       "stdout": [
                         {
@@ -456,7 +459,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:32:36.869Z",
+                      "startTime": "2025-12-03T23:20:56.926Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -491,7 +494,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13316,
+                      "duration": 10930,
                       "errors": [],
                       "stdout": [
                         {
@@ -506,7 +509,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:32:49.637Z",
+                      "startTime": "2025-12-03T23:21:08.607Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -541,7 +544,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13533,
+                      "duration": 12047,
                       "errors": [],
                       "stdout": [
                         {
@@ -549,11 +552,14 @@
                         },
                         {
                           "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:33:02.977Z",
+                      "startTime": "2025-12-03T23:21:19.550Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -588,7 +594,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13448,
+                      "duration": 11143,
                       "errors": [],
                       "stdout": [
                         {
@@ -603,7 +609,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:33:16.530Z",
+                      "startTime": "2025-12-03T23:21:31.611Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -638,7 +644,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 11425,
+                      "duration": 11764,
                       "errors": [],
                       "stdout": [
                         {
@@ -646,11 +652,14 @@
                         },
                         {
                           "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:33:29.992Z",
+                      "startTime": "2025-12-03T23:21:42.771Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -685,7 +694,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 12356,
+                      "duration": 13863,
                       "errors": [],
                       "stdout": [
                         {
@@ -700,7 +709,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:33:41.449Z",
+                      "startTime": "2025-12-03T23:21:54.551Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -735,7 +744,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 16868,
+                      "duration": 11987,
                       "errors": [],
                       "stdout": [
                         {
@@ -746,17 +755,11 @@
                         },
                         {
                           "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Cookies closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:33:53.820Z",
+                      "startTime": "2025-12-03T23:22:08.429Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -791,7 +794,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 15804,
+                      "duration": 15576,
                       "errors": [],
                       "stdout": [
                         {
@@ -802,11 +805,14 @@
                         },
                         {
                           "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:34:10.727Z",
+                      "startTime": "2025-12-03T23:22:20.431Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -841,7 +847,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13067,
+                      "duration": 14413,
                       "errors": [],
                       "stdout": [
                         {
@@ -856,7 +862,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:34:26.563Z",
+                      "startTime": "2025-12-03T23:22:36.081Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -891,7 +897,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 16120,
+                      "duration": 11541,
                       "errors": [],
                       "stdout": [
                         {
@@ -902,14 +908,11 @@
                         },
                         {
                           "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:34:39.649Z",
+                      "startTime": "2025-12-03T23:22:50.518Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -935,8 +938,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-12-03T21:30:58.729Z",
-    "duration": 237103.505,
+    "startTime": "2025-12-03T23:19:15.919Z",
+    "duration": 226213.456,
     "expected": 17,
     "skipped": 0,
     "unexpected": 0,

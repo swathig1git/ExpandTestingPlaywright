@@ -158,8 +158,6 @@ test.describe('PDP Verification - All Product Types', () => {
   for (const product of PRODUCT_TYPES) {
     test(`${product.name} → PDP works correctly`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
       console.log(`Testing: ${product.name}`);
-        //await expect.poll(() => popUpOver.value, { timeout: 30_000 }).toBe(true);
-        //await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
 
       // Step 1: Start from the correct category
       await page.goto(product.categoryUrl);
@@ -168,36 +166,80 @@ test.describe('PDP Verification - All Product Types', () => {
       // await homePage.searchFor(product.searchTerm);
 
       // Step 2: Click first available product card
-        //We are scrolling here only to make sure that products are visibile. This has nothing to with the test
-        //await filters.onlyAtSaks.scrollIntoViewIfNeeded();
-        await page.evaluate(() => {
+      await page.evaluate(() => {
             window.scrollTo(0, document.body.scrollHeight * 0.5); // scrolls to 50% of page height
             });
 
-        await filters.productCards.nth(0).waitFor({ state: 'visible', timeout: 25000 });
-        await filters.productCards.nth(0).click();
-        await expect(page).toHaveURL(/product/);
+      await filters.productCards.nth(0).waitFor({ state: 'visible', timeout: 25000 });
+      await filters.productCards.nth(0).click();
+      await expect(page).toHaveURL(/product/);
 
-    //   // Step 3: Wait for PDP to load
-    await pdp.productName.scrollIntoViewIfNeeded();
-    await expect(pdp.productName).toBeVisible();
-    await pdp.originalPrice.scrollIntoViewIfNeeded();
-    await expect(pdp.originalPrice).toBeVisible();
-    //await expect(pdp.dutiesIncluded).toBeVisible();
-    await pdp.colorOptions.scrollIntoViewIfNeeded();
-    await expect(pdp.colorOptions).toBeVisible();
-    await pdp.inputQuantity.scrollIntoViewIfNeeded();
-    await expect(pdp.inputQuantity).toBeVisible();
-    await pdp.decrementButton.scrollIntoViewIfNeeded();
-    await expect(pdp.decrementButton).toBeVisible();
-    await pdp.incrementButton.scrollIntoViewIfNeeded();
-    await expect(pdp.incrementButton).toBeVisible();
-    // await pdp.addToBag.scrollIntoViewIfNeeded();
-    // await expect(pdp.addToBag).toBeVisible();
-    await pdp.addToFavoritesHeart.scrollIntoViewIfNeeded();
-    await expect(pdp.addToFavoritesHeart).toBeVisible();
-    await pdp.favoritesContainer.scrollIntoViewIfNeeded();
-    await expect(pdp.favoritesContainer).toBeVisible();
+      // Step 3: Common checks for all proucts
+      await expect(pdp.productName).toBeVisible();
+      await expect(pdp.originalPrice).toBeVisible();
+      //await expect(pdp.dutiesIncluded).toBeVisible();
+      await expect(pdp.colorOptions).toBeVisible();
+      await expect(pdp.inputQuantity).toBeVisible();
+      await expect(pdp.decrementButton).toBeVisible();
+      await expect(pdp.incrementButton).toBeVisible();
+
+      await page.evaluate(() => {
+            window.scrollTo(0, document.body.scrollHeight * 0.5); // scrolls to 50% of page height
+            });
+      await pdp.addToFavoritesHeart.scrollIntoViewIfNeeded();
+      await expect(pdp.addToFavoritesHeart).toBeVisible();
+      await pdp.favoritesContainer.scrollIntoViewIfNeeded();
+      await expect(pdp.favoritesContainer).toBeVisible();
+
+      // Specific checks based on type of products
+      switch(product.name){
+        case "Men Accessories":
+            await expect (pdp.addToBag).toBeVisible();
+            break;
+        case "Men Clothing":
+            await expect (pdp.selectASize).toBeVisible();            
+            break;
+        case "Men Gifts":
+            break;
+        case "Men Grooming":
+            await expect (pdp.addToBag).toBeVisible();  
+            break;          
+        case "Men Sale":
+            break;
+        case "Men Shoes":
+            await expect (pdp.selectASize).toBeVisible();  
+            break;
+        case "Women Accessories":
+            await expect (pdp.addToBag).toBeVisible();
+            break;
+        case "Women Beauty":
+            await expect (pdp.addToBag).toBeVisible();
+            break;
+        case "Women Clothing":
+            await expect (pdp.selectASize).toBeVisible();  
+            break;
+        case "Women Dresses":
+            await expect (pdp.selectASize).toBeVisible();  
+            break;
+        case "Women Gifts":
+            break;
+        case "Women Handbags":
+            await expect (pdp.addToBag).toBeVisible();
+            break;
+        case "Women Home":
+            await expect (pdp.addToBag).toBeVisible();
+            break;
+        case "Women Jewellery":
+            await expect (pdp.addToBag).toBeVisible();
+            break;
+        case "Women Kids":
+            break;
+        case "Women Sale":
+            break;
+        case "Women Shoes":
+            await expect (pdp.selectASize).toBeVisible();  
+            break;
+      }
 
     //   // Step 4: Run common PDP checks
     //   await expect(pdp.productImages).toBeVisible();

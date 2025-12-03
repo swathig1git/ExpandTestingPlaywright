@@ -10,11 +10,11 @@ export class SaksProductDisplayPage {
   inputQuantity: Locator;
   decrementButton: Locator;
   incrementButton: Locator;
-  addToBag: Locator;
   addToFavoritesHeart: Locator;
   favoritesContainer: Locator;
 
   //locators for specific types
+  addToBag: Locator;
   brandName: Locator;
   size00: Locator;
   sizeXXS: Locator;
