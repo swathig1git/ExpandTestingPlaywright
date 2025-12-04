@@ -97,7 +97,7 @@ export const PRODUCT_TYPES: ProductType[] =
     categoryUrl: 'https://ca.saks.com/en-ca/men/grooming',
     searchTerm: 'Gucci Marmont',
     expectedSizeType: 'numeric', // e.g., 0, 2, 4
-    browseByList:["Bath & Body", "Best Sellers", "Cleansers", "Cologne", "Deodorant", "Moisturizers", "Sale", "Shave & Beard Care", "Skincare"]
+    browseByList:["Bath & Body", "Best Sellers", "Cleansers", "Cologne", "Moisturizers", "Sale", "Shave & Beard Care", "Skincare"]
 },
 {
     name: 'Women Kids',
