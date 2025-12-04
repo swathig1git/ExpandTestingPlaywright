@@ -7,6 +7,7 @@ export interface ProductType {
   expectedSizeType: string; // could also use 'numeric' | 'alpha' if limited
   browseByList: string[];   // ✅ array of strings
   filterList: string[];
+  bannerCategories? : string[];
 }
 
 // This is the magic — one object per product type
@@ -19,7 +20,8 @@ export const PRODUCT_TYPES: ProductType[] =
     searchTerm: 'Gucci Marmont',
     expectedSizeType: 'numeric', // e.g., 0, 2, 4
     browseByList:["Best Sellers", "New Arrivals", "Only at Saks", "Activewear", "Coats", "Dresses", "Jackets & Blazers", "Jeans", "Jumpsuits & Rompers", "Lingerie & Shapewear", "Matching Sets", "Pants", "Shorts", "Skirts", "Pajamas & Robes", "Sweaters", "Sweatshirts", "Swimsuits & Cover-Ups", "Tops"],
-    filterList: ["Category","Designers","Product Type","Colour","Size","Bag Size","Collection","Fine Fashion","Gender","Heel Height","Length","Lens Type","Material","Neckline","Occasion","Pattern Print","Rise","Style","Toe Style","Wash","Price"]
+    filterList: ["Category","Designers","Product Type","Colour","Size","Bag Size","Collection","Fine Fashion","Gender","Heel Height","Length","Lens Type","Material","Neckline","Occasion","Pattern Print","Rise","Style","Toe Style","Wash","Price"],
+    bannerCategories: ["Dresses", "Tops", "Jackets & Blazers", "Jeans", "Coats"]
 
   },
 {
@@ -39,7 +41,8 @@ export const PRODUCT_TYPES: ProductType[] =
     searchTerm: 'Gucci Marmont',
     expectedSizeType: 'numeric', // e.g., 0, 2, 4
     browseByList:["New Arrivals", "Best Sellers", "Only at Saks", "Bridal Dresses", "Cocktail Dresses", "Day & Casual", "Evening Gowns", "Florals & Prints", "Mother of the Bride", "Wedding Guest Dresses", "Workwear", "Mini Dresses", "Midi Dresses", "Maxi Dresses", "Sale", "Shop All Dresses"],
-    filterList:["Category","Designers","Product Type","Colour","Size","Length","Material","Neckline","Occasion","Pattern Print","Style","Wash","Price"]
+    filterList:["Category","Designers","Product Type","Colour","Size","Length","Material","Neckline","Occasion","Pattern Print","Style","Wash","Price"],
+    bannerCategories:["Evening Gowns", "Cocktail & Party","Maxi Dresses", "Day & Casual", "Wedding Guest Dresses"]
 
 },
 {
@@ -49,7 +52,8 @@ export const PRODUCT_TYPES: ProductType[] =
     searchTerm: 'Gucci Marmont',
     expectedSizeType: 'numeric', // e.g., 0, 2, 4
     browseByList:["New Arrivals", "Best Sellers", "Only at Saks", "Bridal Shoes", "Boots & Booties", "Flats", "Heels & Pumps", "Oxfords & Loafers", "Sandals", "Slides & Mules", "Slippers", "Sneakers"],
-    filterList:["Category","Designers","Product Type","Colour","Size","Collection","Gender","Heel Height","Material","Style","Toe Style","Price"]
+    filterList:["Category","Designers","Product Type","Colour","Size","Collection","Gender","Heel Height","Material","Style","Toe Style","Price"],
+    bannerCategories:["Boots & Booties", "Loafers", "Flats", "Sneakers", "Heels & Pumps"]
 
 },
 {
@@ -69,7 +73,8 @@ export const PRODUCT_TYPES: ProductType[] =
     searchTerm: 'Gucci Marmont',
     expectedSizeType: 'numeric', // e.g., 0, 2, 4
     browseByList:["New Arrivals", "Best Sellers", "Only at Saks", "Backpacks", "Bag Accessories", "Belt Bags", "Bucket Bags", "Clutches & Pouches", "Crossbody Bags", "Diaper Bags", "Evening Bags", "Mini Bags", "Shoulder Bags", "Slouchy Hobo Bags", "Straw & Raffia Bags", "Top Handles & Satchels", "Totes", "Vanity Bags", "Wallets & Card Cases"],
-    filterList:["Category","Designers","Product Type","Colour","Size","Bag Size","Collection","Fine Fashion","Gender","Material","Occasion","Style","Price"]
+    filterList:["Category","Designers","Product Type","Colour","Size","Bag Size","Collection","Fine Fashion","Gender","Material","Occasion","Style","Price"],
+    bannerCategories:["Shoulder Bags", "Totes", "Crossbody Bags", "Suede Handbags", "Evening Bags"]
 
 },
 {
@@ -149,7 +154,8 @@ export const PRODUCT_TYPES: ProductType[] =
     searchTerm: 'Gucci Marmont',
     expectedSizeType: 'numeric', // e.g., 0, 2, 4
     browseByList:["Bestselling Gifts", "Cashmere Sweaters", "Gifts for Her", "Gifts On Sale", "Gifts for Mom", "Baby Shower Gifts", "Wedding Gifts", "Accessory Gifts", "Housewarming Gifts", "Beauty Gifts", "Gifts for Kids", "Home Gifts", "Jewellery Gifts"],
-    filterList:["Category","Designers","Product Type","Colour","Size","Bag Size","Collection","Coverage","Fine Fashion","Finish","Gender","Heel Height","Length","Lens Type","Material","Neckline","Occasion","Pattern Print","Rise","Style","Toe Style","Wash","Price"]
+    filterList:["Category","Designers","Product Type","Colour","Size","Bag Size","Collection","Coverage","Fine Fashion","Finish","Gender","Heel Height","Length","Lens Type","Material","Neckline","Occasion","Pattern Print","Rise","Style","Toe Style","Wash","Price"],
+    bannerCategories:["Gifts for Her", "Gifts for Him", "Beauty Gifts", "Bestselling Gifts", "Stocking Stuffers"]
 
 },
 {

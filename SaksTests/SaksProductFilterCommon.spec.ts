@@ -15,14 +15,22 @@ test.describe('Product Filter Verification - All Product Types', () => {
             });
       await filters.browseByButtons.nth(0).waitFor({ state: 'visible', timeout: 25000 });
 
-      verifyButtons(filters.browseByButtons, product.browseByList, "Browse By");
+      await verifyButtons(filters.browseByButtons, product.browseByList, "Browse By");
       
       await page.evaluate(() => {
             window.scrollTo(0, document.body.scrollHeight * 0.5); // scrolls to 50% of page height
             });
 
       await filters.filterButtons.nth(0).scrollIntoViewIfNeeded();
-      verifyButtons(filters.filterButtons, product.filterList, "Filters");
+      await verifyButtons(filters.filterButtons, product.filterList, "Filters");
+      // if (['Women Clothing', 'Women Dresses', 'Women Shoes', 'Women Handbags', 'Women Gifts'].includes(product.name)) {
+      // await verifyButtons(filters.topBannerCategories, product.bannerCategories, "Banner Categories");
+      // }
+
+      if (product.bannerCategories && product.bannerCategories.length > 0) {
+          await verifyButtons(filters.topBannerCategories, product.bannerCategories, "Banner Categories");
+      }
+
 
       
     });
