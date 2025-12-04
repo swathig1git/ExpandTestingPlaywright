@@ -15,6 +15,8 @@ export class SaksProductFilterPage {
   brandName: Locator;
   productName: Locator;
   originalPrice: Locator;
+  browseByButtons: Locator;
+  
 
   constructor(page: Page) {
     this.page = page;
@@ -31,6 +33,7 @@ export class SaksProductFilterPage {
     this.brandName = page.locator(".ProductCardHeader__productCardBrandName");
     this.productName = page.locator(".ProductCardHeader__title");
     this.originalPrice = page.locator("[data-testid*='originalPrice']");
+    this.browseByButtons = page.locator("[data-testid$='sideNavigation-sideNavigation-2'] button");
   }
 
   async getAllDesignerBrandsCount(){

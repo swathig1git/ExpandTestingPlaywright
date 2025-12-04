@@ -60,829 +60,20 @@
   },
   "suites": [
     {
-      "title": "SaksProductDisplayCommon.spec.ts",
-      "file": "SaksProductDisplayCommon.spec.ts",
+      "title": "SaksProductFilterCommon.spec.ts",
+      "file": "SaksProductFilterCommon.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "PDP Verification - All Product Types",
-          "file": "SaksProductDisplayCommon.spec.ts",
-          "line": 157,
+          "title": "Product Filter Verification - All Product Types",
+          "file": "SaksProductFilterCommon.spec.ts",
+          "line": 6,
           "column": 6,
           "specs": [
             {
-              "title": "Women Clothing → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 22398,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Clothing\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Cookies closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:52:05.026Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-226e6-thing-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-1af556326f7703193930",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Men Clothing → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 16453,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Men Clothing\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Cookies closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:52:27.468Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-13c2d-thing-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-22330c33aaea346fc5eb",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Women Dresses → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 13518,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Dresses\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:52:43.939Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-8b228-esses-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-93f7bf4aabcf8a15dec8",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Women Shoes → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 15651,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Shoes\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Cookies closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:52:57.473Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-d74ef-Shoes-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-8ab7b8ff92c237a89d6a",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Men Shoes → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 12167,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Men Shoes\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:53:13.136Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-2b43b-Shoes-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-38417e3e6c06c5ca676a",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Women Handbags → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 12366,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Handbags\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:53:25.320Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-e4a54-dbags-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-a068d0f685b9c7941d3d",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Women Jewellery → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11518,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Jewellery\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:53:37.703Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-81d05-llery-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-b3919cfe0487c9b2927a",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Women Accessories → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11305,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Accessories\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:53:49.239Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-aa00c-ories-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-57782b210e51d16724ad",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Men Accessories → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11848,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Men Accessories\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:54:00.560Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-4170c-ories-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-c00650b12db6ca0551de",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Women Beauty → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 14185,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Beauty\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:54:12.423Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-5accf-eauty-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-bb267c6c6a7d68cb01f1",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Men Grooming → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 10537,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Men Grooming\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:54:26.621Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-af355-oming-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-777d2d477ca4a2bd83b1",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Women Kids → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11048,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Kids\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:54:37.170Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-a4e63--Kids-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-5e18f2d33a6cae98befa",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Women Home → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 15144,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Home\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Cookies closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:54:48.236Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-9e452--Home-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-06dc2902a28ea5ef36d6",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Women Gifts → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11149,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Gifts\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:55:03.395Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-e7fe9-Gifts-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-ad253374a8e56bffac01",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Men Gifts → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11566,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Men Gifts\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:55:14.562Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-69d66-Gifts-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-73aea77b2970f79f7945",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Women Sale → PDP works correctly",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 12166,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Sale\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T23:55:26.140Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-712ba--Sale-→-PDP-works-correctly/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "7e5dda165d1b92fc2196-fa3c4777e18d2f6b208f",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
-              "column": 9
-            },
-            {
-              "title": "Men Sale → PDP works correctly",
+              "title": "Women Clothing → Browse By Filters Existence Verification",
               "ok": true,
               "tags": [],
               "tests": [
@@ -901,6 +92,820 @@
                       "errors": [],
                       "stdout": [
                         {
+                          "text": "Testing: Women Clothing\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:10:17.385Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-3fdcb-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-ff1b87dfb0b2c0acfa42",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Men Clothing → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9620,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Men Clothing\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:10:29.012Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-5d098-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-64f4005490bc7fe12826",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Women Dresses → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10179,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Dresses\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:10:38.649Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-341e4-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-3806e12d2b90990258c4",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Women Shoes → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9944,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Shoes\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:10:48.847Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-8efe1-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-857546877b5508009368",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Men Shoes → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10909,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Men Shoes\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:10:58.818Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-b7e4f-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-d88d403a1565bb104d1c",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Women Handbags → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9451,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Handbags\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:11:09.743Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-f1fee-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-1b7147d39bee21a136dc",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Women Jewellery → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10119,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Jewellery\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:11:19.207Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-564f4-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-f5110fa848c14d1ae2fb",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Women Accessories → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11512,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Accessories\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:11:29.340Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-6a2b7-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-75231bbd52c0b7dea1f8",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Men Accessories → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10614,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Men Accessories\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:11:40.868Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-07020-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-8ff618ee6caa733b8565",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Women Beauty → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10120,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Beauty\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:11:51.499Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-28787-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-4383b7bb1dae19340db6",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Men Grooming → Browse By Filters Existence Verification",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11436,
+                      "error": {
+                        "message": "Error: ❌ Missing browse-by button: \"Deodorant\"\nActual buttons on page: [\n  \"Bath & Body\",\n  \"Best Sellers\",\n  \"Cleansers\",\n  \"Cologne\",\n  \"Moisturizers\",\n  \"Sale\",\n  \"Shave & Beard Care\",\n  \"Skincare\"\n]\n\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: ❌ Missing browse-by button: \"Deodorant\"\nActual buttons on page: [\n  \"Bath & Body\",\n  \"Best Sellers\",\n  \"Cleansers\",\n  \"Cologne\",\n  \"Moisturizers\",\n  \"Sale\",\n  \"Shave & Beard Care\",\n  \"Skincare\"\n]\n\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at verifyBrowseByButtons (/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksUtils/verifyUtils.ts:20:4)",
+                        "location": {
+                          "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksUtils/verifyUtils.ts",
+                          "column": 4,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../SaksUtils/verifyUtils.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m     expect(exists\u001b[33m,\u001b[39m \u001b[32m`❌ Missing browse-by button: \"${expected}\"\u001b[39m\n \u001b[90m 19 |\u001b[39m \u001b[32mActual buttons on page: ${JSON.stringify(normalized, null, 2)}\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[32m`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   }\n \u001b[90m 22 |\u001b[39m }\n \u001b[90m 23 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksUtils/verifyUtils.ts",
+                            "column": 4,
+                            "line": 20
+                          },
+                          "message": "Error: ❌ Missing browse-by button: \"Deodorant\"\nActual buttons on page: [\n  \"Bath & Body\",\n  \"Best Sellers\",\n  \"Cleansers\",\n  \"Cologne\",\n  \"Moisturizers\",\n  \"Sale\",\n  \"Shave & Beard Care\",\n  \"Skincare\"\n]\n\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[90m   at \u001b[39m../SaksUtils/verifyUtils.ts:20\n\n\u001b[0m \u001b[90m 18 |\u001b[39m     expect(exists\u001b[33m,\u001b[39m \u001b[32m`❌ Missing browse-by button: \"${expected}\"\u001b[39m\n \u001b[90m 19 |\u001b[39m \u001b[32mActual buttons on page: ${JSON.stringify(normalized, null, 2)}\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[32m`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   }\n \u001b[90m 22 |\u001b[39m }\n \u001b[90m 23 |\u001b[39m\u001b[0m\n\u001b[2m    at verifyBrowseByButtons (/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksUtils/verifyUtils.ts:20:4)\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Testing: Men Grooming\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:12:01.641Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-b10b4-ters-Existence-Verification/test-finished-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-b10b4-ters-Existence-Verification/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksUtils/verifyUtils.ts",
+                        "column": 4,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-a89e190270cc41f337fc",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Women Kids → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9656,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Kids\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:12:14.290Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-e5e2f-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-adef9dd44a14662be7b4",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Women Home → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11457,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Home\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:12:23.982Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-15973-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-1bfb71205d62f26da3bf",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Women Gifts → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11992,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Gifts\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:12:35.452Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-12475-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-a52fbc2de53dd85be6e7",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Men Gifts → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10502,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Men Gifts\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:12:47.457Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-5e22f-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-df25bf74ce5556bb0257",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Women Sale → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11897,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Testing: Women Sale\n"
+                        },
+                        {
+                          "text": "Discount closed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-04T03:12:57.972Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-bb3fc-ters-Existence-Verification/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f687db6786c750273c2b-915183abe8a06dd426d9",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Men Sale → Browse By Filters Existence Verification",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11947,
+                      "errors": [],
+                      "stdout": [
+                        {
                           "text": "Testing: Men Sale\n"
                         },
                         {
@@ -912,13 +917,13 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T23:55:38.323Z",
+                      "startTime": "2025-12-04T03:13:09.887Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductDisplayCommon-P-86854--Sale-→-PDP-works-correctly/test-finished-1.png"
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-92437-ters-Existence-Verification/test-finished-1.png"
                         }
                       ]
                     }
@@ -926,9 +931,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "7e5dda165d1b92fc2196-9836c8df6aba25f61315",
-              "file": "SaksProductDisplayCommon.spec.ts",
-              "line": 159,
+              "id": "f687db6786c750273c2b-3a6cd95a23132f171c96",
+              "file": "SaksProductFilterCommon.spec.ts",
+              "line": 8,
               "column": 9
             }
           ]
@@ -938,11 +943,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-12-03T23:52:03.495Z",
-    "duration": 226463.98500000002,
-    "expected": 17,
+    "startTime": "2025-12-04T03:10:16.545Z",
+    "duration": 185339.484,
+    "expected": 16,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
