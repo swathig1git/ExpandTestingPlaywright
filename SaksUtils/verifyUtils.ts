@@ -1,8 +1,9 @@
 import { expect, Locator, Page } from "@playwright/test";
 
-export async function verifyBrowseByButtons(
+export async function verifyButtons(
   browseByLocator: Locator,
-  expectedList: string[]
+  expectedList: string[],
+  menuTesting: string
 ) {
   // Wait until at least one button is rendered (page fully loaded)
   await browseByLocator.first().waitFor({ state: "visible", timeout: 10000 });
@@ -15,7 +16,7 @@ export async function verifyBrowseByButtons(
   for (const expected of expectedList) {
     const exists = normalized.some(text => text === expected);
 
-    expect(exists, `❌ Missing browse-by button: "${expected}"
+    expect(exists, `❌ Missing button: "${expected}" in menu "${menuTesting}"
 Actual buttons on page: ${JSON.stringify(normalized, null, 2)}
 `).toBe(true);
   }

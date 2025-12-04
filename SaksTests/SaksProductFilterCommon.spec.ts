@@ -1,6 +1,6 @@
 // tests/pdp-verification.spec.ts
 import { test, expect } from '../base/fixtureSaks.spec'; // your custom fixtures
-import {verifyBrowseByButtons} from '../SaksUtils/verifyUtils'
+import {verifyButtons} from '../SaksUtils/verifyUtils'
 import { PRODUCT_TYPES, ProductType } from '../SaksUtils/productTypes';
 // One test, runs once per product type
 test.describe('Product Filter Verification - All Product Types', () => {
@@ -15,7 +15,14 @@ test.describe('Product Filter Verification - All Product Types', () => {
             });
       await filters.browseByButtons.nth(0).waitFor({ state: 'visible', timeout: 25000 });
 
-      verifyBrowseByButtons(filters.browseByButtons, product.browseByList);
+      verifyButtons(filters.browseByButtons, product.browseByList, "Browse By");
+      
+      await page.evaluate(() => {
+            window.scrollTo(0, document.body.scrollHeight * 0.5); // scrolls to 50% of page height
+            });
+
+      await filters.filterButtons.nth(0).scrollIntoViewIfNeeded();
+      verifyButtons(filters.filterButtons, product.filterList, "Filters");
 
       
     });
