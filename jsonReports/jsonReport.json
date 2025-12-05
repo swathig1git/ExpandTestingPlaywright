@@ -69,7 +69,7 @@
         {
           "title": "Product Filter Verification - All Product Types",
           "file": "SaksProductFilterCommon.spec.ts",
-          "line": 6,
+          "line": 7,
           "column": 6,
           "specs": [
             {
@@ -88,25 +88,25 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 17616,
+                      "duration": 12227,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "Testing: Women Clothing\n"
                         },
                         {
-                          "text": "Discount closed\n"
+                          "text": "\u001b[90mundefined\u001b[39m\n"
                         },
                         {
                           "text": "Discount closed\n"
                         },
                         {
-                          "text": "Cookies closed\n"
+                          "text": "Discount closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-04T20:50:39.939Z",
+                      "startTime": "2025-12-04T21:13:16.879Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -122,7 +122,7 @@
               ],
               "id": "f687db6786c750273c2b-ff1b87dfb0b2c0acfa42",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -141,11 +141,14 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 11724,
+                      "duration": 11783,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "Testing: Men Clothing\n"
+                        },
+                        {
+                          "text": "\u001b[90mundefined\u001b[39m\n"
                         },
                         {
                           "text": "Discount closed\n"
@@ -156,7 +159,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-04T20:50:57.583Z",
+                      "startTime": "2025-12-04T21:13:29.141Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -172,7 +175,7 @@
               ],
               "id": "f687db6786c750273c2b-64f4005490bc7fe12826",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -191,22 +194,28 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 12823,
+                      "duration": 14453,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "Testing: Women Dresses\n"
                         },
                         {
+                          "text": "\u001b[90mundefined\u001b[39m\n"
+                        },
+                        {
                           "text": "Discount closed\n"
                         },
                         {
                           "text": "Discount closed\n"
+                        },
+                        {
+                          "text": "Cookies closed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-04T20:51:09.334Z",
+                      "startTime": "2025-12-04T21:13:40.945Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -222,7 +231,7 @@
               ],
               "id": "f687db6786c750273c2b-3806e12d2b90990258c4",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -241,11 +250,14 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 11437,
+                      "duration": 10811,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "Testing: Women Shoes\n"
+                        },
+                        {
+                          "text": "\u001b[90mundefined\u001b[39m\n"
                         },
                         {
                           "text": "Discount closed\n"
@@ -256,7 +268,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-04T20:51:22.195Z",
+                      "startTime": "2025-12-04T21:13:55.417Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -272,7 +284,7 @@
               ],
               "id": "f687db6786c750273c2b-857546877b5508009368",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -291,11 +303,14 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 10557,
+                      "duration": 11162,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "Testing: Men Shoes\n"
+                        },
+                        {
+                          "text": "\u001b[90mundefined\u001b[39m\n"
                         },
                         {
                           "text": "Discount closed\n"
@@ -306,7 +321,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-04T20:51:33.661Z",
+                      "startTime": "2025-12-04T21:14:06.241Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -322,7 +337,7 @@
               ],
               "id": "f687db6786c750273c2b-d88d403a1565bb104d1c",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -340,36 +355,60 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 12575,
-                      "errors": [],
+                      "status": "interrupted",
+                      "duration": 5668,
+                      "error": {
+                        "message": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('[data-testid$=\\'sideNavigation-sideNavigation-2\\'] button').first() to be visible\u001b[22m\n",
+                        "stack": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('[data-testid$=\\'sideNavigation-sideNavigation-2\\'] button').first() to be visible\u001b[22m\n\n    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksProductFilterCommon.spec.ts:18:44",
+                        "location": {
+                          "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksProductFilterCommon.spec.ts",
+                          "column": 44,
+                          "line": 18
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m             window\u001b[33m.\u001b[39mscrollTo(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m document\u001b[33m.\u001b[39mbody\u001b[33m.\u001b[39mscrollHeight \u001b[33m*\u001b[39m \u001b[35m0.5\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// scrolls to 50% of page height\u001b[39m\n \u001b[90m 17 |\u001b[39m             })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m       \u001b[36mawait\u001b[39m filters\u001b[33m.\u001b[39mbrowseByButtons\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m25000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m\n \u001b[90m 20 |\u001b[39m       \u001b[36mawait\u001b[39m verifyButtons(filters\u001b[33m.\u001b[39mbrowseByButtons\u001b[33m,\u001b[39m product\u001b[33m.\u001b[39mbrowseByList\u001b[33m,\u001b[39m \u001b[32m\"Browse By\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m       \u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksProductFilterCommon.spec.ts",
+                            "column": 44,
+                            "line": 18
+                          },
+                          "message": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('[data-testid$=\\'sideNavigation-sideNavigation-2\\'] button').first() to be visible\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m             window\u001b[33m.\u001b[39mscrollTo(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m document\u001b[33m.\u001b[39mbody\u001b[33m.\u001b[39mscrollHeight \u001b[33m*\u001b[39m \u001b[35m0.5\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// scrolls to 50% of page height\u001b[39m\n \u001b[90m 17 |\u001b[39m             })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m       \u001b[36mawait\u001b[39m filters\u001b[33m.\u001b[39mbrowseByButtons\u001b[33m.\u001b[39mnth(\u001b[35m0\u001b[39m)\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m25000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m\n \u001b[90m 20 |\u001b[39m       \u001b[36mawait\u001b[39m verifyButtons(filters\u001b[33m.\u001b[39mbrowseByButtons\u001b[33m,\u001b[39m product\u001b[33m.\u001b[39mbrowseByList\u001b[33m,\u001b[39m \u001b[32m\"Browse By\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m       \u001b[0m\n\u001b[2m    at /Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksProductFilterCommon.spec.ts:18:44\u001b[22m"
+                        }
+                      ],
                       "stdout": [
                         {
                           "text": "Testing: Women Handbags\n"
                         },
                         {
-                          "text": "Discount closed\n"
+                          "text": "\u001b[90mundefined\u001b[39m\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-04T20:51:44.247Z",
+                      "startTime": "2025-12-04T21:14:17.418Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-f1fee-ters-Existence-Verification/test-finished-1.png"
+                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-f1fee-ters-Existence-Verification/test-failed-1.png"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/SaksTests/SaksProductFilterCommon.spec.ts",
+                        "column": 44,
+                        "line": 18
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-1b7147d39bee21a136dc",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -383,43 +422,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 10654,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Jewellery\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-04T20:51:56.857Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-564f4-ters-Existence-Verification/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-f5110fa848c14d1ae2fb",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -433,43 +442,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9468,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Accessories\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-04T20:52:07.537Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-6a2b7-ters-Existence-Verification/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-75231bbd52c0b7dea1f8",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -483,43 +462,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11440,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Men Accessories\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-04T20:52:17.024Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-07020-ters-Existence-Verification/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-8ff618ee6caa733b8565",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -533,43 +482,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11403,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Beauty\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-04T20:52:28.487Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-28787-ters-Existence-Verification/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-4383b7bb1dae19340db6",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -583,40 +502,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11632,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Men Grooming\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-04T20:52:39.904Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-b10b4-ters-Existence-Verification/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-a89e190270cc41f337fc",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -630,43 +522,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 10667,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Kids\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-04T20:52:51.574Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-e5e2f-ters-Existence-Verification/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-adef9dd44a14662be7b4",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -680,46 +542,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 18549,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Home\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Cookies closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-04T20:53:02.279Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-15973-ters-Existence-Verification/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-1bfb71205d62f26da3bf",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -733,46 +562,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 18535,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Gifts\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Cookies closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-04T20:53:20.853Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-12475-ters-Existence-Verification/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-a52fbc2de53dd85be6e7",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -786,40 +582,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 12289,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Men Gifts\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-04T20:53:39.404Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-5e22f-ters-Existence-Verification/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-df25bf74ce5556bb0257",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -833,43 +602,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11198,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Women Sale\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-04T20:53:51.708Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-bb3fc-ters-Existence-Verification/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-915183abe8a06dd426d9",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             },
             {
@@ -883,40 +622,13 @@
                   "expectedStatus": "passed",
                   "projectId": "",
                   "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 13796,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Testing: Men Sale\n"
-                        },
-                        {
-                          "text": "Discount closed\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-04T20:54:02.920Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/surendratavvalu/Desktop/ExpandTestingPlaywright/test-results/SaksProductFilterCommon-Pr-92437-ters-Existence-Verification/test-finished-1.png"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f687db6786c750273c2b-3a6cd95a23132f171c96",
               "file": "SaksProductFilterCommon.spec.ts",
-              "line": 8,
+              "line": 9,
               "column": 9
             }
           ]
@@ -926,10 +638,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-12-04T20:50:38.893Z",
-    "duration": 217979.062,
-    "expected": 17,
-    "skipped": 0,
+    "startTime": "2025-12-04T21:13:15.967Z",
+    "duration": 67177.007,
+    "expected": 5,
+    "skipped": 12,
     "unexpected": 0,
     "flaky": 0
   }
