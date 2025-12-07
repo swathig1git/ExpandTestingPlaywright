@@ -148,17 +148,22 @@ test.describe('PDP Verification - All Product Types', () => {
 
       let brandName = await filters.brandName.nth(0).textContent();
       let productName = await filters.productName.nth(0).textContent();
-      let originalPrice = await filters.originalPrice.nth(0).textContent();
 
       await filters.productCards.nth(0).waitFor({ state: 'visible', timeout: 25000 });
       await filters.productCards.nth(0).click();
       await expect(page).toHaveURL(/product/);
 
-      let pdpCurrentPrice = await pdp.currentPrice.textContent();
+      let pdpCurrentPrice ;
+      if (!(await pdp.currentPrice.isVisible()))
+        pdpCurrentPrice = await pdp.originalPrice.textContent();
+      else
+        pdpCurrentPrice = await pdp.currentPrice.textContent();
+    
       let pdpCurrentPriceNum = priceInNumber(pdpCurrentPrice?pdpCurrentPrice:"");
 
       if (!(await pdp.addToBag.isVisible()))
         await pdp.sizeButtons.nth(0).click();
+
 
       await pdp.addToBag.scrollIntoViewIfNeeded();
       await pdp.addToBag.click();
