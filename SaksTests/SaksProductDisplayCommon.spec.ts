@@ -152,9 +152,7 @@ test.describe('PDP Verification - All Product Types', () => {
       await filters.productCards.nth(0).click();
       await expect(page).toHaveURL(/product/);
 
-      let needSize = await pdp.selectASize.isVisible();
-      //console.log("needSize = ", needSize);
-      if (needSize)
+      if (!(await pdp.addToBag.isVisible()))
         await pdp.sizeButtons.nth(0).click();
 
       await pdp.addToBag.scrollIntoViewIfNeeded();

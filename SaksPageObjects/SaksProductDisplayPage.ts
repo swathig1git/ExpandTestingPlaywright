@@ -69,7 +69,7 @@ export class SaksProductDisplayPage {
     this.nextImageButton = page.locator("//div[contains(@class,'ProductCarousel__small')]//button[contains(@class,'slick-next')]");
     this.buttonImages = page.locator("//div[contains(@class,'ProductCarousel__small')]//button[not(contains(@class, 'slick-arrow'))]//img");
     this.sizeContainer = page.locator("//div[contains(@class,'ProductOptionsSize__flexGrid')]");
-    this.sizeButtons = this.sizeContainer.locator("button");
+    this.sizeButtons = this.sizeContainer.locator("button:not(.SelectableBox__disabled)");
     this.sizeGuide = page.locator(".ProductSizeGuidesVB__sizeGuideButton");
     this.sizeGuideTable = page.locator(".ProductSizeGuidesVB__multipleTablesContainer");
     this.menOrWomen = page.locator(".Breadcrumbs__item:first-child");
