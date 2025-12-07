@@ -8,11 +8,6 @@ export class SaksMyFavoritesPage {
   productName: Locator;
   favoritesDescription: Locator;
 
-
-
-  
-
-
   constructor(page: Page) {
     this.page = page;
     this.productCards = page.locator("div[data-testid^='product-card']");

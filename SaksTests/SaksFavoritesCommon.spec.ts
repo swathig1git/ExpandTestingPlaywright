@@ -30,7 +30,7 @@ test.describe('Favorites Verification - All Product Types', () => {
 
 test.describe('Favorites Verification - All Product Types', () => {
   for (const product of PRODUCT_TYPES) {
-    test.only(`${product.name} → One Favorite Testing`, async ({ page, pdp, filters,favorites,  cookiePopupClosed }) => {
+    test(`${product.name} → One Favorite Testing`, async ({ page, pdp, filters,favorites,  cookiePopupClosed }) => {
       console.log(`Testing: ${product.name}`);
 
       // Step 1: Start from the correct category
@@ -72,7 +72,7 @@ test.describe('Favorites Verification - All Product Types', () => {
 
 test.describe('Favorites Verification - All Product Types', () => {
   for (const product of PRODUCT_TYPES) {
-    test(`${product.name} → Two Favorite Testing`, async ({ page, pdp, filters,favorites,  cookiePopupClosed }) => {
+    test.only(`${product.name} → Two Favorite Testing`, async ({ page, pdp, filters,favorites,  cookiePopupClosed }) => {
       console.log(`Testing: ${product.name}`);
 
       // Step 1: Start from the correct category
@@ -85,10 +85,24 @@ test.describe('Favorites Verification - All Product Types', () => {
 
       await filters.productCards.nth(0).waitFor({ state: 'visible', timeout: 25000 });
       await filters.productCards.nth(0).click();
+      //first product added to favorites
       await pdp.addToFavoritesHeart.scrollIntoViewIfNeeded();
       await pdp.addToFavoritesHeart.click();
 
       await pdp.youMayAlsoLike.scrollIntoViewIfNeeded();
+      await pdp.youMayAlsoLikeProducts.nth(0).click();
+
+      //second product product added to favorites
+      await pdp.addToFavoritesHeart.scrollIntoViewIfNeeded();
+      await pdp.addToFavoritesHeart.click();
+
+      //go to favorites page
+      await pdp.favoritesContainer.click();
+      await favorites.productName.nth(0).waitFor({ state: 'visible', timeout: 25000 });
+      let count = await favorites.productName.count();
+
+      expect (count).toBe(2);
+
       
 
 
