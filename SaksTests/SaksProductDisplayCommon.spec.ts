@@ -1,6 +1,8 @@
 // tests/pdp-verification.spec.ts
+import { exitCode } from 'process';
 import { test, expect } from '../base/fixtureSaks.spec'; // your custom fixtures
 import { PRODUCT_TYPES, ProductType } from '../SaksUtils/productTypes';
+import {priceInNumber} from '../SaksUtils/stringUtils'
 // One test, runs once per product type
 test.describe('PDP Verification - All Product Types', () => {
   for (const product of PRODUCT_TYPES) {
@@ -152,6 +154,9 @@ test.describe('PDP Verification - All Product Types', () => {
       await filters.productCards.nth(0).click();
       await expect(page).toHaveURL(/product/);
 
+      let pdpCurrentPrice = await pdp.currentPrice.textContent();
+      let pdpCurrentPriceNum = priceInNumber(pdpCurrentPrice?pdpCurrentPrice:"");
+
       if (!(await pdp.addToBag.isVisible()))
         await pdp.sizeButtons.nth(0).click();
 
@@ -162,6 +167,14 @@ test.describe('PDP Verification - All Product Types', () => {
 
       let minCartProductNames: string[] = await pdp.minCartProductName.allTextContents();
       expect (minCartProductNames).toContain(productName);
+
+      let miniCartSubtotal = await pdp.miniCartTotal.textContent();
+      let miniCartSubtotalNum = priceInNumber(miniCartSubtotal?miniCartSubtotal:"");
+
+      console.log("pdpPrice = ", pdpCurrentPrice);
+      console.log("miniCartSubtotal = ", miniCartSubtotal);
+
+      expect(miniCartSubtotalNum).toEqual(pdpCurrentPriceNum);
 
 
     });

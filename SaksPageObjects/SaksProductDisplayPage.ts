@@ -5,6 +5,7 @@ export class SaksProductDisplayPage {
   //locators common for all items
   productName: Locator;
   originalPrice: Locator;
+  currentPrice: Locator;
   dutiesIncluded: Locator;
   colorOptions: Locator;
   inputQuantity: Locator;
@@ -22,10 +23,12 @@ export class SaksProductDisplayPage {
   brand: Locator;
   selectASize: Locator;
   plsSelectSizeMsg: Locator;
+
   miniCart: Locator;
   miniCartItems: Locator;
   minCartProductName: Locator;
   miniCartTotal: Locator;
+
   stockQtyExceeded: Locator;
   productImage: Locator;
   buttons: Locator;
@@ -61,6 +64,9 @@ export class SaksProductDisplayPage {
     this.miniCartItems = page.locator(".MiniCartItem__item");
     this.minCartProductName = page.locator(".MiniCartItem__title");
     this.miniCartTotal = page.locator(".MiniCart__total");
+
+    this.originalPrice = page.locator("[data-testid*='originalPrice']");
+    this.currentPrice = page.locator(".Price__currentPrice")
     
     this.stockQtyExceeded = page.locator("//div[@id='STATUSCODE_STOCK_QUANTITY_EXCEEDED']");
     this.productImage = page.locator("//div[contains(@class,'ProductCarousel__small')]//div[@data-index='4']//img");
@@ -77,7 +83,7 @@ export class SaksProductDisplayPage {
     this.sizeGuideClose = page.locator(".Modal__close");
     this.addToFavoritesHeart = page.locator(".AddToCart__favoriteContainer button")
     this.favoritesContainer = page.locator("a.FavoritesLink__container");
-    this.originalPrice = page.locator("[data-testid*='originalPrice']");
+
     this.dutiesIncluded = page.locator("[data-testid*='promotionAdditional'] .HtmlText__htmlText");
     this.colorOptions = page.locator("[data-testid*='color-options']");
     this.inputQuantity = page.locator("[data-testid*='quantity-input']");
