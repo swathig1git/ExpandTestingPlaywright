@@ -28,6 +28,7 @@ export class SaksProductFilterPage {
   allColours: Locator;
   selectedFilterButtons: Locator;
   emptyList: Locator;
+  priceRangeError: Locator;
   
 
   constructor(page: Page) {
@@ -58,6 +59,8 @@ export class SaksProductFilterPage {
     this.allColours = page.locator("//button[@aria-label='Colour']/following-sibling::div//button");
     this.selectedFilterButtons = page.locator("[data-testid*='selectedFilters'] button");
     this.emptyList = page.locator(".EmptyListingFallback__textWrapper");
+    this.priceRangeError = page.locator (".FiltersInputRange__inputRangeError");
+
   }
 
   async getAllDesignerBrandsCount(){

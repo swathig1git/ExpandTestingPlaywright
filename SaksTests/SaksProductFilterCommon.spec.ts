@@ -140,15 +140,15 @@ test.describe('Product Filter Verification - Pricing - All Products', () => {
 
 test.describe('Product Filter Verification - Pricing - All Products', () => {
   for (const productType of PRODUCT_TYPES) {
-    test.only(`${productType.name} → Price Out of Range Verification   `, async ({ page, filters,cookiePopupClosed }, testInfo) => {
+    test(`${productType.name} → Price Out of Range Verification   `, async ({ page, filters,cookiePopupClosed }, testInfo) => {
       test.setTimeout(60000); 
       console.log(`Testing: ${productType.name}`);
 
       // Step 1: Start from the correct category
       await page.goto(productType.categoryUrl);
       await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
-      let minPrice = "50000";
-      let maxPrice = "60000"
+      let minPrice = "1000000";
+      let maxPrice = "2000000"
       await filters.filtersHeader.scrollIntoViewIfNeeded();
       await filters.priceButton.scrollIntoViewIfNeeded();
       await filters.priceButton.click();
@@ -164,6 +164,34 @@ test.describe('Product Filter Verification - Pricing - All Products', () => {
     });
   }
 });
+
+test.describe('Product Filter Verification - Pricing - All Products', () => {
+  for (const productType of PRODUCT_TYPES) {
+    test.only(`${productType.name} → Price Wrong Range Verification   `, async ({ page, filters,cookiePopupClosed }, testInfo) => {
+      test.setTimeout(60000); 
+      console.log(`Testing: ${productType.name}`);
+
+      // Step 1: Start from the correct category
+      await page.goto(productType.categoryUrl);
+      await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
+      let minPrice = "2000";
+      let maxPrice = "1000"
+      await filters.filtersHeader.scrollIntoViewIfNeeded();
+      await filters.priceButton.scrollIntoViewIfNeeded();
+      await filters.priceButton.click();
+      await filters.priceMin.scrollIntoViewIfNeeded();
+      await filters.priceMin.fill(minPrice);
+      await filters.priceMax.fill(maxPrice);
+      await filters.updatePrice.scrollIntoViewIfNeeded();
+      await filters.updatePrice.click();
+
+      await expect(filters.priceRangeError).toBeVisible();
+
+      
+    });
+  }
+});
+
 
 
 test.describe('Product Filter Verification - Colour - All Products', () => {
