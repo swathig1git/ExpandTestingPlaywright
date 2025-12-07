@@ -2,7 +2,7 @@
 import { test, expect } from '../base/fixtureSaks.spec'; // your custom fixtures
 import {verifyButtons} from '../SaksUtils/verifyUtils'
 import { PRODUCT_TYPES, ProductType } from '../SaksUtils/productTypes';
-import { toUrlName } from "../SaksUtils/stringUtils";
+import { toUrlName, priceInNumber } from "../SaksUtils/stringUtils";
 
 // One test, runs once per product type
 test.describe('Product Filter Verification - All Product Types', () => {
@@ -36,7 +36,7 @@ test.describe('Product Filter Verification - All Product Types', () => {
 
 test.describe('Product Filter Verification - Page change Verification - All Products', () => {
   for (const productType of PRODUCT_TYPES) {
-    test.only(`${productType.name} → Browse By   `, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }, testInfo) => {
+    test(`${productType.name} → Browse By   `, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }, testInfo) => {
       test.setTimeout(250000); 
       console.log(`Testing: ${productType.name}`);
 
@@ -73,4 +73,68 @@ test.describe('Product Filter Verification - Page change Verification - All Prod
     });
   }
 });
+
+test.describe('Product Filter Verification - Pricing - All Products', () => {
+  for (const productType of PRODUCT_TYPES) {
+    test.only(`${productType.name} → Price Range Verification   `, async ({ page, filters,cookiePopupClosed }, testInfo) => {
+      test.setTimeout(60000); 
+      console.log(`Testing: ${productType.name}`);
+
+      // Step 1: Start from the correct category
+      await page.goto(productType.categoryUrl);
+      await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
+      let minPrice = "500";
+      let maxPrice = "6000"
+      await filters.filtersHeader.scrollIntoViewIfNeeded();
+      await filters.priceButton.scrollIntoViewIfNeeded();
+      await filters.priceButton.click();
+      await filters.priceMin.scrollIntoViewIfNeeded();
+      await filters.priceMin.fill(minPrice);
+      await filters.priceMax.fill(maxPrice);
+      await filters.updatePrice.scrollIntoViewIfNeeded();
+      await filters.updatePrice.click();
+
+      //We are scrolling here only to make sure that products are visibile. This has nothing to with the test
+      await filters.browseBy.scrollIntoViewIfNeeded();
+      await filters.productCurrentPrice.nth(0).waitFor({ state: 'visible', timeout: 25000 });
+
+      const numberOfProductsToVerify = 8;
+
+      // Now safe to count
+      const count = await filters.productCurrentPrice.count();
+      console.log(`Found ${count} products`);
+      expect(count).toBeGreaterThan(0);
+
+      let previousCount = 0;
+      while (true) {
+        await page.mouse.wheel(0, 500);
+        await page.waitForTimeout(800);
+
+        const count = await filters.productCurrentPrice.count();
+
+        if (count === previousCount || count > numberOfProductsToVerify) break;
+        previousCount = count;
+      }
+
+
+      const priceLocators = await filters.productCurrentPrice.all();
+
+      for (const [index, priceLocator] of priceLocators.slice(0, numberOfProductsToVerify).entries()) {
+          const html = await priceLocator.innerHTML();
+          console.log(html);
+
+          const productPrice = await priceLocator.textContent();
+          console.log("Price = ", productPrice);
+          let productPriceInNumber;
+                  if (productPrice !== null) {
+              productPriceInNumber = priceInNumber(productPrice);
+          }
+          expect(productPriceInNumber).toBeGreaterThanOrEqual(Number(minPrice));
+          expect(productPriceInNumber).toBeLessThanOrEqual(Number(maxPrice));
+      }
+      
+    });
+  }
+});
+
 

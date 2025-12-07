@@ -18,13 +18,20 @@ export class SaksProductFilterPage {
   browseByButtons: Locator;
   filterButtons: Locator;
   topBannerCategories: Locator;
+  priceButton: Locator;
+  priceMin: Locator;
+  priceMax: Locator;
+  updatePrice: Locator;
+  filtersHeader: Locator;
+  productCurrentPrice: Locator;
+  browseBy: Locator;
   
 
   constructor(page: Page) {
     this.page = page;
     this.colourFilter = page.locator("//h4//div[text()='Colour']");
     this.greenColourFilter = page.locator("//button[@name='Green']");
-    this.productCards = page.locator("a.CardImage__imageWrapper");
+    this.productCards = page.locator("div[data-testid*='product-card']");
     this.onlyAtSaks = page.locator("//div[text()='Only at Saks']")
     this.designerFilter = page.locator("//div[text()='Designers']");
     this.designerOptions = page.locator("//div[text()='10 brand options']/following-sibling::div/button");
@@ -38,6 +45,13 @@ export class SaksProductFilterPage {
     this.browseByButtons = page.locator("[data-testid$='sideNavigation-sideNavigation-2'] button");
     this.filterButtons = page.locator(".FiltersSidebar__button");
     this.topBannerCategories = page.locator("[data-testid*='hp-banner-center-cta-row']");
+    this.priceButton = page.locator("button[aria-label='Price']");
+    this.priceMin = page.locator("#min");
+    this.priceMax = page.locator("#max");
+    this.updatePrice = page.locator("//button[text()='Update price']");
+    this.filtersHeader = page.locator("//div[text()='FILTERS']");
+    this.productCurrentPrice = this.productCards.locator("[data-testid*='currentPrice']");
+    this.browseBy = page.locator("[data-testid*='sideNavigation'] [data-testid*='title']");
   }
 
   async getAllDesignerBrandsCount(){

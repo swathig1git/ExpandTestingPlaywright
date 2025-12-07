@@ -7,3 +7,14 @@ export function toUrlName(name: string): string {
     .replace(/à/g, "a")
     .replace(/&/g, "and");
 }
+
+export function priceInNumber(priceText: string): number {
+  // Remove everything except digits and decimal point
+  const cleaned = priceText.replace(/[^0-9.]/g, "");
+
+  // Convert to number
+  const value = parseFloat(cleaned);
+
+  // Return NaN if nothing valid was found
+  return isNaN(value) ? NaN : value;
+}

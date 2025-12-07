@@ -3,6 +3,8 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
   testDir: "./SaksTests",
   testMatch: ["SaksTests/*.spec.ts"],
+  fullyParallel: true,
+  workers: 4, 
 
   use: {
     browserName: "chromium",
