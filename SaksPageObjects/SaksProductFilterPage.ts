@@ -25,6 +25,8 @@ export class SaksProductFilterPage {
   filtersHeader: Locator;
   productCurrentPrice: Locator;
   browseBy: Locator;
+  allColours: Locator;
+  selectedFilterButtons: Locator;
   
 
   constructor(page: Page) {
@@ -52,6 +54,8 @@ export class SaksProductFilterPage {
     this.filtersHeader = page.locator("//div[text()='FILTERS']");
     this.productCurrentPrice = this.productCards.locator("[data-testid*='currentPrice']");
     this.browseBy = page.locator("[data-testid*='sideNavigation'] [data-testid*='title']");
+    this.allColours = page.locator("//button[@aria-label='Colour']/following-sibling::div//button");
+    this.selectedFilterButtons = page.locator("[data-testid*='selectedFilters'] button");
   }
 
   async getAllDesignerBrandsCount(){

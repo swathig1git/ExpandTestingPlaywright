@@ -76,7 +76,7 @@ test.describe('Product Filter Verification - Page change Verification - All Prod
 
 test.describe('Product Filter Verification - Pricing - All Products', () => {
   for (const productType of PRODUCT_TYPES) {
-    test.only(`${productType.name} → Price Range Verification   `, async ({ page, filters,cookiePopupClosed }, testInfo) => {
+    test(`${productType.name} → Price Range Verification   `, async ({ page, filters,cookiePopupClosed }, testInfo) => {
       test.setTimeout(60000); 
       console.log(`Testing: ${productType.name}`);
 
@@ -126,7 +126,7 @@ test.describe('Product Filter Verification - Pricing - All Products', () => {
           const productPrice = await priceLocator.textContent();
           console.log("Price = ", productPrice);
           let productPriceInNumber;
-                  if (productPrice !== null) {
+          if (productPrice !== null) {
               productPriceInNumber = priceInNumber(productPrice);
           }
           expect(productPriceInNumber).toBeGreaterThanOrEqual(Number(minPrice));
@@ -138,3 +138,45 @@ test.describe('Product Filter Verification - Pricing - All Products', () => {
 });
 
 
+test.describe('Product Filter Verification - Colour - All Products', () => {
+  for (const productType of PRODUCT_TYPES) {
+    test.only(`${productType.name} → Colour Filter Verification   `, async ({ page, filters,cookiePopupClosed }, testInfo) => {
+      test.setTimeout(60000); 
+      console.log(`Testing: ${productType.name}`);
+
+      // Step 1: Start from the correct category
+      await page.goto(productType.categoryUrl);
+      await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
+
+      await filters.colourFilter.scrollIntoViewIfNeeded();
+      await filters.colourFilter.click();
+      await filters.allColours.nth(0).waitFor({ state: 'visible', timeout: 25000 });
+
+      let colourLocators = await filters.allColours.all();
+      const selectedButtonsLocator = filters.selectedFilterButtons;
+      for (const colourLocator of colourLocators) {
+          let colour = await colourLocator.textContent();
+          //console.log("colour = ", colour);
+
+          await colourLocator.click();
+
+          //console.log("new page URL: ", page.url());
+          expect(page.url()).toContain(colour?.toLowerCase());
+          const count = await selectedButtonsLocator.count();
+          //Second last button, last button is always CLEAR ALL
+          //When you select the first button, there is no CLEAR ALL Button, 
+          // but still it works because nth(-1) returns the last button of the locator, which is the first or only button 
+          const secondLastButton = selectedButtonsLocator.nth(count - 2);
+          const colourSecondLastButton = await secondLastButton.textContent();
+          expect (colour).toBe(colourSecondLastButton);
+      }
+
+       const count = await selectedButtonsLocator.count();
+       const lastButton = selectedButtonsLocator.nth(count - 1);
+       await lastButton.click();
+
+       expect (page.url()). toBe(productType.categoryUrl);
+
+    })
+  }
+});
