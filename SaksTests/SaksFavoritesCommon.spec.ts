@@ -86,6 +86,7 @@ test.describe('Favorites Verification - All Product Types', () => {
       await filters.productCards.nth(0).waitFor({ state: 'visible', timeout: 25000 });
       await filters.productCards.nth(0).click();
       //first product added to favorites
+      let productName1 = await pdp.productName.textContent();
       await pdp.addToFavoritesHeart.scrollIntoViewIfNeeded();
       await pdp.addToFavoritesHeart.click();
 
@@ -93,6 +94,7 @@ test.describe('Favorites Verification - All Product Types', () => {
       await pdp.youMayAlsoLikeProducts.nth(0).click();
 
       //second product product added to favorites
+      let productName2 = await pdp.productName.textContent();
       await pdp.addToFavoritesHeart.scrollIntoViewIfNeeded();
       await pdp.addToFavoritesHeart.click();
 
@@ -100,10 +102,11 @@ test.describe('Favorites Verification - All Product Types', () => {
       await pdp.favoritesContainer.click();
       await favorites.productName.nth(0).waitFor({ state: 'visible', timeout: 25000 });
       let count = await favorites.productName.count();
-
       expect (count).toBe(2);
 
-      
+      const favProductNames: string[] = await favorites.productName.allTextContents();
+      expect (favProductNames).toContain(productName1);
+      expect (favProductNames).toContain(productName2);
 
 
     });
