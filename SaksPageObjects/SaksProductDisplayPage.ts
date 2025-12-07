@@ -36,6 +36,9 @@ export class SaksProductDisplayPage {
   menOrWomen: Locator;
   sizeGuideCategory: Locator;
   sizeGuideClose: Locator;
+  youMayAlsoLike: Locator;
+  youMayAlsoLikeProducts: Locator;
+  
 
   
 
@@ -72,7 +75,9 @@ export class SaksProductDisplayPage {
     this.colorOptions = page.locator("[data-testid*='color-options']");
     this.inputQuantity = page.locator("[data-testid*='quantity-input']");
     this.decrementButton= page.locator("[data-testid*='decrement-btn']");
-    this.incrementButton = page.locator("[data-testid*='increment-btn']")
+    this.incrementButton = page.locator("[data-testid*='increment-btn']");
+    this.youMayAlsoLike = page.locator("[data-testid*='relatedItems']");
+    this.youMayAlsoLikeProducts = this.youMayAlsoLike.locator("[data-testid*='product-card']");
 
   }
 async isXXSSizeAvailable(): Promise<boolean> {

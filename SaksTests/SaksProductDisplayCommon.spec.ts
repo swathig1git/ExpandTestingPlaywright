@@ -1,6 +1,5 @@
 // tests/pdp-verification.spec.ts
 import { test, expect } from '../base/fixtureSaks.spec'; // your custom fixtures
-import {verifyBrowseByButtons} from '../SaksUtils/verifyUtils'
 import { PRODUCT_TYPES, ProductType } from '../SaksUtils/productTypes';
 // One test, runs once per product type
 test.describe('PDP Verification - All Product Types', () => {

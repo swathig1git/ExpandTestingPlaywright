@@ -1,0 +1,11 @@
+1. Favorites Functionality
+2. Add to Cart Functionality
+3. Login Functionality
+4. Different product types have Different sizes for them. Some dont have sizes. Verify whichver has sizes and correct type sizes
+5. Jewllery has 3 images, bags have 5, dresses have 7 images. Verify all types
+6. Recenlty viewed Functionality
+7. Search functionality - ajax shows options only after 3 letters typed
+8. Free shipping functionality positive and negative testing
+9. You may also like functionality
+10. Shopping bag page functionality
+11. Filtering in favourites page functionality 

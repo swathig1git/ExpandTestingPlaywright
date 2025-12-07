@@ -6,6 +6,9 @@ export class SaksMyFavoritesPage {
   productCards: Locator;
   brandName: Locator;
   productName: Locator;
+  favoritesDescription: Locator;
+
+
 
   
 
@@ -15,6 +18,9 @@ export class SaksMyFavoritesPage {
     this.productCards = page.locator("div[data-testid^='product-card']");
     this.brandName = this.productCards.locator("h4");
     this.productName = this.productCards.locator("div[data-testid*='product-card-title']");
+    this.favoritesDescription = page.locator(".Favorites__description");
+
+    
   }
 
 }
