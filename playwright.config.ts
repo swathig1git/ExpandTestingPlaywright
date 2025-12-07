@@ -4,7 +4,7 @@ export default defineConfig({
   testDir: "./SaksTests",
   testMatch: ["SaksTests/*.spec.ts"],
   fullyParallel: true,
-  workers: 4, 
+  workers: 1, 
 
   use: {
     browserName: "chromium",

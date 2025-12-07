@@ -160,6 +160,9 @@ test.describe('Product Filter Verification - Colour - All Products', () => {
 
           await colourLocator.click();
 
+          const ariaPressed = await colourLocator.getAttribute('aria-pressed');
+          expect (ariaPressed).toBeTruthy();
+
           //console.log("new page URL: ", page.url());
           expect(page.url()).toContain(colour?.toLowerCase());
           const count = await selectedButtonsLocator.count();
@@ -174,8 +177,15 @@ test.describe('Product Filter Verification - Colour - All Products', () => {
        const count = await selectedButtonsLocator.count();
        const lastButton = selectedButtonsLocator.nth(count - 1);
        await lastButton.click();
-
        expect (page.url()). toBe(productType.categoryUrl);
+
+       colourLocators = await filters.allColours.all();
+       for (const colourLocator of colourLocators) {
+
+          const ariaPressed = await colourLocator.getAttribute('aria-pressed');
+          expect (ariaPressed).toBeFalsy();
+      
+       }
 
     })
   }
