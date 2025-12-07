@@ -23,6 +23,9 @@ export class SaksProductDisplayPage {
   selectASize: Locator;
   plsSelectSizeMsg: Locator;
   miniCart: Locator;
+  miniCartItems: Locator;
+  minCartProductName: Locator;
+  miniCartTotal: Locator;
   stockQtyExceeded: Locator;
   productImage: Locator;
   buttons: Locator;
@@ -54,7 +57,11 @@ export class SaksProductDisplayPage {
     this.selectASize = page.locator("//button[text()='Select a size']");
     this.plsSelectSizeMsg = page.locator("//div[@class='MissingOption__container']");
 
-    this.miniCart = page.locator("//div[@class='MiniCart__title']")
+    this.miniCart = page.locator("//div[@class='MiniCart__title']");
+    this.miniCartItems = page.locator(".MiniCartItem__item");
+    this.minCartProductName = page.locator(".MiniCartItem__title");
+    this.miniCartTotal = page.locator(".MiniCart__total");
+    
     this.stockQtyExceeded = page.locator("//div[@id='STATUSCODE_STOCK_QUANTITY_EXCEEDED']");
     this.productImage = page.locator("//div[contains(@class,'ProductCarousel__small')]//div[@data-index='4']//img");
     this.buttons = page.locator("//div[contains(@class,'ProductCarousel__small')]//button[not(contains(@class, 'slick-arrow'))]");

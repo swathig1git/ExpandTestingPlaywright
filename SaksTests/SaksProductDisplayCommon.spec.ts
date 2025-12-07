@@ -133,5 +133,40 @@ test.describe('PDP Verification - All Product Types', () => {
             break;
       }
     });
+
+    test.only(`${product.name} → Add to Cart - One item - test`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
+      console.log(`Testing: ${product.name}`);
+            // Step 1: Start from the correct category
+      await page.goto(product.categoryUrl);
+
+      // Step 2: Click first available product card
+      await page.evaluate(() => {
+            window.scrollTo(0, document.body.scrollHeight * 0.5); // scrolls to 50% of page height
+            });
+
+      let brandName = await filters.brandName.nth(0).textContent();
+      let productName = await filters.productName.nth(0).textContent();
+      let originalPrice = await filters.originalPrice.nth(0).textContent();
+
+      await filters.productCards.nth(0).waitFor({ state: 'visible', timeout: 25000 });
+      await filters.productCards.nth(0).click();
+      await expect(page).toHaveURL(/product/);
+
+      let needSize = await pdp.selectASize.isVisible();
+      //console.log("needSize = ", needSize);
+      if (needSize)
+        await pdp.sizeButtons.nth(0).click();
+
+      await pdp.addToBag.scrollIntoViewIfNeeded();
+      await pdp.addToBag.click();
+
+      await expect (pdp.miniCart).toBeVisible();
+
+      let minCartProductNames: string[] = await pdp.minCartProductName.allTextContents();
+      expect (minCartProductNames).toContain(productName);
+
+
+    });
   }
 });
+
