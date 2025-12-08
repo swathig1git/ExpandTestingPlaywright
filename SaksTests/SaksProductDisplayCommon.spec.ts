@@ -136,7 +136,7 @@ test.describe('PDP Verification - All Product Types', () => {
       }
     });
 
-    test.only(`${product.name} → Add to Cart - One item - test`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
+    test(`${product.name} → Add to Cart - One item - test`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
       console.log(`Testing: ${product.name}`);
             // Step 1: Start from the correct category
       await page.goto(product.categoryUrl);
@@ -158,7 +158,7 @@ test.describe('PDP Verification - All Product Types', () => {
         pdpCurrentPrice = await pdp.originalPrice.textContent();
       else
         pdpCurrentPrice = await pdp.currentPrice.textContent();
-    
+
       let pdpCurrentPriceNum = priceInNumber(pdpCurrentPrice?pdpCurrentPrice:"");
 
       if (!(await pdp.addToBag.isVisible()))
@@ -183,6 +183,143 @@ test.describe('PDP Verification - All Product Types', () => {
 
 
     });
+
+    test.only(`${product.name} → Add to Cart - Two Different items - test`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
+      console.log(`Testing: ${product.name}`);
+            // Step 1: Start from the correct category
+      await page.goto(product.categoryUrl);
+
+      // Step 2: Click first available product card
+      await page.evaluate(() => {
+            window.scrollTo(0, document.body.scrollHeight * 0.5); // scrolls to 50% of page height
+            });
+
+      let brandName = await filters.brandName.nth(0).textContent();
+      
+
+      await filters.productCards.nth(0).waitFor({ state: 'visible', timeout: 25000 });
+      await filters.productCards.nth(0).click();
+      await expect(page).toHaveURL(/product/);
+
+      let productName1 = await pdp.productName.textContent();
+
+      let pdpCurrentPrice1 ;
+      if (!(await pdp.currentPrice.isVisible()))
+        pdpCurrentPrice1 = await pdp.originalPrice.textContent();
+      else
+        pdpCurrentPrice1 = await pdp.currentPrice.textContent();
+    
+      let pdpCurrentPriceNum1 = priceInNumber(pdpCurrentPrice1?pdpCurrentPrice1:"");
+
+      //console.log("!product.noSizeFlag: ", !product.noSizeFlag);
+      if (!product.noSizeFlag) {
+        if (await pdp.sizeButtons.nth(0).isVisible())
+            await pdp.sizeButtons.nth(0).click();
+      }
+
+
+
+      await pdp.addToBag.scrollIntoViewIfNeeded();
+      await pdp.addToBag.click();
+
+      await pdp.youMayAlsoLike.scrollIntoViewIfNeeded();
+      await pdp.youMayAlsoLikeProducts.nth(0).click();
+
+      let productName2 = await pdp.productName.textContent();
+      let pdpCurrentPrice2 ;
+      if (!(await pdp.currentPrice.isVisible()))
+        pdpCurrentPrice2 = await pdp.originalPrice.textContent();
+      else
+        pdpCurrentPrice2 = await pdp.currentPrice.textContent();
+    
+      let pdpCurrentPriceNum2 = priceInNumber(pdpCurrentPrice2?pdpCurrentPrice2:"");
+
+      if (!product.noSizeFlag) {
+        if (await pdp.sizeButtons.nth(0).isVisible())
+        await pdp.sizeButtons.nth(0).click();
+      }
+
+
+      await pdp.addToBag.scrollIntoViewIfNeeded();
+      await pdp.addToBag.click();
+
+
+
+      await expect (pdp.miniCart).toBeVisible();
+
+      let minCartProductNames: string[] = await pdp.minCartProductName.allTextContents();
+      expect (minCartProductNames).toContain(productName1);
+      expect (minCartProductNames).toContain(productName2);
+
+      let miniCartSubtotal = await pdp.miniCartTotal.textContent();
+      let miniCartSubtotalNum = priceInNumber(miniCartSubtotal?miniCartSubtotal:"");
+
+
+      console.log("miniCartSubtotalNum =", miniCartSubtotalNum);
+      console.log("pdpCurrentPriceNum1 + pdpCurrentPriceNum2 = ", pdpCurrentPriceNum1 + pdpCurrentPriceNum2)
+      expect(miniCartSubtotalNum).toEqual(pdpCurrentPriceNum1 + pdpCurrentPriceNum2);
+
+
+    });
+
+    test(`${product.name} → Add to Cart - One item, Add two times - test`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
+      console.log(`Testing: ${product.name}`);
+            // Step 1: Start from the correct category
+      await page.goto(product.categoryUrl);
+
+      // Step 2: Click first available product card
+      await page.evaluate(() => {
+            window.scrollTo(0, document.body.scrollHeight * 0.5); // scrolls to 50% of page height
+            });
+
+      let brandName = await filters.brandName.nth(0).textContent();
+      
+
+      await filters.productCards.nth(0).waitFor({ state: 'visible', timeout: 25000 });
+      await filters.productCards.nth(0).click();
+      await expect(page).toHaveURL(/product/);
+
+      let productName1 = await pdp.productName.textContent();
+
+      let pdpCurrentPrice1 ;
+      if (!(await pdp.currentPrice.isVisible()))
+        pdpCurrentPrice1 = await pdp.originalPrice.textContent();
+      else
+        pdpCurrentPrice1 = await pdp.currentPrice.textContent();
+    
+      let pdpCurrentPriceNum1 = priceInNumber(pdpCurrentPrice1?pdpCurrentPrice1:"");
+
+      console.log("!product.noSizeFlag: ", !product.noSizeFlag);
+      if (!product.noSizeFlag) {
+        if (await pdp.sizeButtons.nth(0).isVisible())
+            await pdp.sizeButtons.nth(0).click();
+      }
+
+
+
+      await pdp.addToBag.scrollIntoViewIfNeeded();
+      await pdp.addToBag.click();
+
+      await pdp.addToBag.click();
+
+
+      await expect (pdp.miniCart).toBeVisible();
+
+      let minCartProductNames: string[] = await pdp.minCartProductName.allTextContents();
+      expect (minCartProductNames).toContain(productName1);
+
+      let miniCartSubtotal = await pdp.miniCartTotal.textContent();
+      let miniCartSubtotalNum = priceInNumber(miniCartSubtotal?miniCartSubtotal:"");
+
+
+      console.log("miniCartSubtotalNum =", miniCartSubtotalNum);
+      console.log("pdpCurrentPriceNum1 * 2 = ", pdpCurrentPriceNum1 * 2)
+      expect(miniCartSubtotalNum).toEqual(pdpCurrentPriceNum1 * 2);
+
+
+    });
+
+
   }
 });
 

@@ -65,8 +65,8 @@ export class SaksProductDisplayPage {
     this.minCartProductName = page.locator(".MiniCartItem__title");
     this.miniCartTotal = page.locator(".MiniCart__total");
 
-    this.originalPrice = page.locator("[data-testid*='originalPrice']");
-    this.currentPrice = page.locator(".Price__currentPrice")
+    this.originalPrice = page.locator("[data-testid*='productMain-group-2'] [data-testid*='originalPrice']");
+    this.currentPrice = page.locator("[data-testid*='productMain-group-2'] .Price__currentPrice")
     
     this.stockQtyExceeded = page.locator("//div[@id='STATUSCODE_STOCK_QUANTITY_EXCEEDED']");
     this.productImage = page.locator("//div[contains(@class,'ProductCarousel__small')]//div[@data-index='4']//img");
