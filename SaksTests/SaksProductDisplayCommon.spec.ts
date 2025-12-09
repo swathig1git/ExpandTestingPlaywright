@@ -184,7 +184,7 @@ test.describe('PDP Verification - All Product Types', () => {
 
     });
 
-    test.only(`${product.name} → Add to Cart - Two Different items - test`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
+    test(`${product.name} → Add to Cart - Two Different items - test`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
       console.log(`Testing: ${product.name}`);
             // Step 1: Start from the correct category
       await page.goto(product.categoryUrl);
@@ -262,10 +262,11 @@ test.describe('PDP Verification - All Product Types', () => {
 
     });
 
-    test(`${product.name} → Add to Cart - One item, Add two times - test`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
+    test.only(`${product.name} → Add to Cart - One item, Add two times - test`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
       console.log(`Testing: ${product.name}`);
             // Step 1: Start from the correct category
       await page.goto(product.categoryUrl);
+      await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
 
       // Step 2: Click first available product card
       await page.evaluate(() => {
@@ -289,7 +290,6 @@ test.describe('PDP Verification - All Product Types', () => {
     
       let pdpCurrentPriceNum1 = priceInNumber(pdpCurrentPrice1?pdpCurrentPrice1:"");
 
-      console.log("!product.noSizeFlag: ", !product.noSizeFlag);
       if (!product.noSizeFlag) {
         if (await pdp.sizeButtons.nth(0).isVisible())
             await pdp.sizeButtons.nth(0).click();
@@ -300,21 +300,39 @@ test.describe('PDP Verification - All Product Types', () => {
       await pdp.addToBag.scrollIntoViewIfNeeded();
       await pdp.addToBag.click();
 
+      console.log("before second click");
+      //Add the same product again
       await pdp.addToBag.click();
 
+      if (!(await pdp.miniCart.isVisible())){
+        await pdp.cartButton.click();
+        await expect (pdp.miniCart).toBeVisible();
 
-      await expect (pdp.miniCart).toBeVisible();
+        let minCartProductNames: string[] = await pdp.minCartProductName.allTextContents();
+        expect (minCartProductNames).toContain(productName1);
 
-      let minCartProductNames: string[] = await pdp.minCartProductName.allTextContents();
-      expect (minCartProductNames).toContain(productName1);
-
-      let miniCartSubtotal = await pdp.miniCartTotal.textContent();
-      let miniCartSubtotalNum = priceInNumber(miniCartSubtotal?miniCartSubtotal:"");
+        let miniCartSubtotal = await pdp.miniCartTotal.textContent();
+        let miniCartSubtotalNum = priceInNumber(miniCartSubtotal?miniCartSubtotal:"");
 
 
-      console.log("miniCartSubtotalNum =", miniCartSubtotalNum);
-      console.log("pdpCurrentPriceNum1 * 2 = ", pdpCurrentPriceNum1 * 2)
-      expect(miniCartSubtotalNum).toEqual(pdpCurrentPriceNum1 * 2);
+        console.log("miniCartSubtotalNum =", miniCartSubtotalNum);
+        console.log("pdpCurrentPriceNum1 = ", pdpCurrentPriceNum1)
+        expect(miniCartSubtotalNum).toEqual(pdpCurrentPriceNum1);
+      }
+      else{
+        await expect (pdp.miniCart).toBeVisible();
+
+        let minCartProductNames: string[] = await pdp.minCartProductName.allTextContents();
+        expect (minCartProductNames).toContain(productName1);
+
+        let miniCartSubtotal = await pdp.miniCartTotal.textContent();
+        let miniCartSubtotalNum = priceInNumber(miniCartSubtotal?miniCartSubtotal:"");
+
+
+        console.log("miniCartSubtotalNum =", miniCartSubtotalNum);
+        console.log("pdpCurrentPriceNum1 * 2 = ", pdpCurrentPriceNum1 * 2)
+        expect(miniCartSubtotalNum).toEqual(pdpCurrentPriceNum1 * 2);
+      }
 
 
     });

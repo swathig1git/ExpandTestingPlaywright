@@ -14,6 +14,12 @@ export class SaksProductDisplayPage {
   addToFavoritesHeart: Locator;
   favoritesContainer: Locator;
 
+  cartButton: Locator;
+  miniCart: Locator;
+  miniCartItems: Locator;
+  minCartProductName: Locator;
+  miniCartTotal: Locator;
+
   //locators for specific types
   addToBag: Locator;
   brandName: Locator;
@@ -24,10 +30,7 @@ export class SaksProductDisplayPage {
   selectASize: Locator;
   plsSelectSizeMsg: Locator;
 
-  miniCart: Locator;
-  miniCartItems: Locator;
-  minCartProductName: Locator;
-  miniCartTotal: Locator;
+
 
   stockQtyExceeded: Locator;
   productImage: Locator;
@@ -44,6 +47,7 @@ export class SaksProductDisplayPage {
   sizeGuideClose: Locator;
   youMayAlsoLike: Locator;
   youMayAlsoLikeProducts: Locator;
+  stockQtyExceededMsg: Locator;
   
 
   
@@ -91,6 +95,8 @@ export class SaksProductDisplayPage {
     this.incrementButton = page.locator("[data-testid*='increment-btn']");
     this.youMayAlsoLike = page.locator("[data-testid*='relatedItems']");
     this.youMayAlsoLikeProducts = this.youMayAlsoLike.locator("[data-testid*='product-card']");
+    this.stockQtyExceededMsg = page.locator("[data-testid$='flyout-STATUSCODE_STOCK_QUANTITY_EXCEEDED']");
+    this.cartButton = page.locator(".HeaderDropdown__dropdown");
 
   }
 async isXXSSizeAvailable(): Promise<boolean> {
