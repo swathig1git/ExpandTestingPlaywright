@@ -262,7 +262,7 @@ test.describe('PDP Verification - All Product Types', () => {
 
     });
 
-    test.only(`${product.name} → Add to Cart - One item, Add two times - test`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
+    test(`${product.name} → Add to Cart - One item, Add two times - test`, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
       console.log(`Testing: ${product.name}`);
             // Step 1: Start from the correct category
       await page.goto(product.categoryUrl);
@@ -341,3 +341,55 @@ test.describe('PDP Verification - All Product Types', () => {
   }
 });
 
+test.describe('PDP Verification - All Product Types', () => {
+  // const allowedNames = ['Women Clothing', 'Men Clothing', 'Women Dresses', 'Women Shoes', 'Men Shoes', 'Women Kids'];
+  // const productsToTest = PRODUCT_TYPES.filter(p => allowedNames.includes(p.name));
+  for (const product of PRODUCT_TYPES) {
+    test.only(`${product.name} → PDP Recently Viewed Verification `, async ({ page, homePage, pdp, filters,popUpOver,  cookiePopupClosed }) => {
+      console.log(`Testing: ${product.name}`);
+
+      // Step 1: Start from the correct category
+      await page.goto(product.categoryUrl);
+
+      await page.evaluate(() => {
+            window.scrollTo(0, document.body.scrollHeight * 0.5); // scrolls to 50% of page height
+            });
+
+      await filters.productCards.nth(0).waitFor({ state: 'visible', timeout: 25000 });
+      await filters.productCards.nth(0).click();
+      await expect(page).toHaveURL(/product/);
+      // For first product, Recently Viewed would be empty, so the section would be hidden
+      await expect (pdp.recentlyViewedHeader).toBeHidden();
+      let productName1 = await pdp.productName.textContent();
+
+      //Go to a new product and then verify that the first product in Recently Viewed Products
+      await page.waitForTimeout(800);
+      await pdp.youMayAlsoLike.scrollIntoViewIfNeeded();
+      await pdp.youMayAlsoLikeProducts.nth(0).click();
+      let productName2 = await pdp.productName.textContent();
+
+      await expect(page).toHaveURL(/product/);
+      await pdp.recentlyViewedHeader.scrollIntoViewIfNeeded();
+      await pdp.recentlyViewedProductNames.waitFor();
+      await expect (pdp.recentlyViewedProductNames).toBeVisible();
+      let productCount = await pdp.recentlyViewedProductNames.count();
+      let recentlyViewedProductNamesArray = await pdp.recentlyViewedProductNames.allTextContents();
+      console.log (recentlyViewedProductNamesArray);
+      expect(recentlyViewedProductNamesArray).toContain(productName1);
+
+      await pdp.youMayAlsoLike.scrollIntoViewIfNeeded();
+      await pdp.youMayAlsoLikeProducts.nth(0).click();
+      let productName3 = await pdp.productName.textContent();
+
+      await expect(page).toHaveURL(/product/);
+      await pdp.recentlyViewedHeader.scrollIntoViewIfNeeded();
+      await pdp.recentlyViewedProductNames.nth(0).waitFor();
+      await expect (pdp.recentlyViewedProductNames.nth(0)).toBeVisible();
+      recentlyViewedProductNamesArray = await pdp.recentlyViewedProductNames.allTextContents();
+      console.log (recentlyViewedProductNamesArray);
+      expect(recentlyViewedProductNamesArray).toContain(productName2);
+
+
+    });
+  }
+});

@@ -13,6 +13,9 @@ export class SaksProductDisplayPage {
   incrementButton: Locator;
   addToFavoritesHeart: Locator;
   favoritesContainer: Locator;
+  recentlyViewedHeader: Locator;
+  recentlyViewedProductTray: Locator;
+  recentlyViewedProductNames: Locator; 
 
   cartButton: Locator;
   miniCart: Locator;
@@ -97,6 +100,10 @@ export class SaksProductDisplayPage {
     this.youMayAlsoLikeProducts = this.youMayAlsoLike.locator("[data-testid*='product-card']");
     this.stockQtyExceededMsg = page.locator("[data-testid$='flyout-STATUSCODE_STOCK_QUANTITY_EXCEEDED']");
     this.cartButton = page.locator(".HeaderDropdown__dropdown");
+    this.recentlyViewedHeader = page.getByText("Recently Viewed");
+    this.recentlyViewedProductTray = page.locator("[data-testid*='recentlyViewedTray']");
+    //this.recentlyViewedProductNames = this.recentlyViewedProductTray.locator(".ProductCardHeader__titleWrapper");
+    this.recentlyViewedProductNames = page.locator("[data-testid*='recentlyViewedTray']  .ProductCardHeader__titleWrapper");
 
   }
 async isXXSSizeAvailable(): Promise<boolean> {

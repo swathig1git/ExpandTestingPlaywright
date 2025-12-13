@@ -10,6 +10,7 @@ export interface ProductType {
   filterList: string[];
   bannerCategories? : string[];
   noSizeFlag: boolean;
+  allSizes?: string[]; 
 }
 
 // This is the magic — one object per product type
@@ -25,7 +26,8 @@ export const PRODUCT_TYPES: ProductType[] =
     urlForBrowseByList:["best-sellers","new-arrivals","only-at-saks","activewear","coats","dresses","jackets-and-blazers","jeans","jumpsuits-rompers","lingerie-and-shapewear","matching-sets","pants","shorts","skirts","pajamas-robes","sweaters","sweatshirts","swimsuits-and-cover-ups","tops"],
     filterList: ["Category","Designers","Product Type","Colour","Size","Bag Size","Collection","Fine Fashion","Gender","Heel Height","Length","Lens Type","Material","Neckline","Occasion","Pattern Print","Rise","Style","Toe Style","Wash","Price"],
     bannerCategories: ["Dresses", "Tops", "Jackets & Blazers", "Jeans", "Coats"],
-    noSizeFlag: false
+    noSizeFlag: false,
+    allSizes:["XX-Small", "X-Small", "Small", "Medium", "Large", "X-Large","X-Large", "2", "4", "6", "8", "10", "12", "16" ]
 
   },
 {
@@ -37,7 +39,8 @@ export const PRODUCT_TYPES: ProductType[] =
     browseByList:["New Arrivals", "Suits & Suit Separates", "Activewear", "Coats & Jackets", "Puffer Jackets", "Jeans", "Loungewear & Pyjamas", "Pants", "Shorts", "Sportcoats & Blazers", "Suits & Suit Separates", "Sweaters", "Sweatshirts & Hoodies", "Swimwear", "Shirts", "Tuxedos & Formal Wear", "Underwear & Socks", "Matching Sets"],
     urlForBrowseByList:["new-arrivals","suits-suit-separates","activewear","coats-jackets","puffer-jackets","jeans","loungewear-and-pyjamas","pants","shorts","sportcoats-and-blazers","suits","sweaters","sweatshirts-and-hoodies","swimwear","shirts","tuxedos-and-formal-wear","underwear-socks","matching-sets"],
     filterList:["Category","Designers","Product Type","Colour","Size","Bag Size","Cuff","Fine Fashion","Gender","Heel Height","Length","Lens Type","Material","Neckline","Pattern Print","Rise","Style","Toe Style","Wash","Price"],
-    noSizeFlag: false
+    noSizeFlag: false,
+    allSizes:["XX-Small", "X-Small", "Small", "Medium", "Large", "X-Large","X-Large", "2", "4", "6", "8", "10", "12", "16" ]
 
 },
 {
@@ -50,7 +53,9 @@ export const PRODUCT_TYPES: ProductType[] =
     urlForBrowseByList:["new-arrivals","best-sellers","only-at-saks","bridal-dresses","cocktail-dresses","day-and-casual","evening-gowns","florals-and-prints","mother-of-the-bride","wedding-guest-dresses","workwear","mini-dresses","midi-dresses","maxi-dresses","sale", "dresses"],
     filterList:["Category","Designers","Product Type","Colour","Size","Length","Material","Neckline","Occasion","Pattern Print","Style","Wash","Price"],
     bannerCategories:["Evening Gowns", "Cocktail & Party","Maxi Dresses", "Day & Casual", "Wedding Guest Dresses"],
-    noSizeFlag: false
+    noSizeFlag: false,
+    allSizes:["XX-Small", "X-Small", "Small", "Medium", "Large", "X-Large","X-Large"]
+
 
 },
 {
@@ -63,7 +68,8 @@ export const PRODUCT_TYPES: ProductType[] =
     urlForBrowseByList:["new-arrivals","best-sellers","only-at-saks","bridal-shoes","boots","flats","heels-and-pumps","oxfords-and-loafers","sandals","slides-and-mules","slippers","sneakers"],
     filterList:["Category","Designers","Product Type","Colour","Size","Collection","Gender","Heel Height","Material","Style","Toe Style","Price"],
     bannerCategories:["Boots & Booties", "Loafers", "Flats", "Sneakers", "Heels & Pumps"],
-    noSizeFlag: false
+    noSizeFlag: false,
+    allSizes:["36 (6)", "36.5 (6.5)", "37 (7)","37.5 (7.5)", "38 (8)","38.5 (8.5)", "39 (9)","39.5 (9.5)", "40 (10)","40.5 (10.5)", "41 (11)", "41.5 (11.5)", "42 (12)"]
 
 },
 {
