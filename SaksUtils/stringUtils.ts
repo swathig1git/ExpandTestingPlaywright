@@ -18,3 +18,8 @@ export function priceInNumber(priceText: string): number {
   // Return NaN if nothing valid was found
   return isNaN(value) ? NaN : value;
 }
+
+export function getBrandFromURL(url: string): string | null {
+  const match = url.match(/[?&]query=([^&]+)/);
+  return match ? decodeURIComponent(match[1]) : null;
+}

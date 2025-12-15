@@ -29,6 +29,7 @@ export class SaksProductFilterPage {
   selectedFilterButtons: Locator;
   emptyList: Locator;
   priceRangeError: Locator;
+  searchBox: Locator;
   
 
   constructor(page: Page) {
@@ -60,6 +61,7 @@ export class SaksProductFilterPage {
     this.selectedFilterButtons = page.locator("[data-testid*='selectedFilters'] button");
     this.emptyList = page.locator(".EmptyListingFallback__textWrapper");
     this.priceRangeError = page.locator (".FiltersInputRange__inputRangeError");
+    this.searchBox = page.locator("input[aria-label$='Search']");
 
   }
 

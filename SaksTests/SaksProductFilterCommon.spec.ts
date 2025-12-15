@@ -2,7 +2,8 @@
 import { test, expect } from '../base/fixtureSaks.spec'; // your custom fixtures
 import {verifyButtons} from '../SaksUtils/verifyUtils'
 import { PRODUCT_TYPES, ProductType } from '../SaksUtils/productTypes';
-import { toUrlName, priceInNumber } from "../SaksUtils/stringUtils";
+import { toUrlName, priceInNumber, getBrandFromURL } from "../SaksUtils/stringUtils";
+import { PRODUCT_BRANDS } from '../SaksUtils/productBrands';
 
 // One test, runs once per product type
 test.describe('Product Filter Verification - All Product Types', () => {
@@ -167,7 +168,7 @@ test.describe('Product Filter Verification - Pricing - All Products', () => {
 
 test.describe('Product Filter Verification - Pricing - All Products', () => {
   for (const productType of PRODUCT_TYPES) {
-    test.only(`${productType.name} → Price Wrong Range Verification   `, async ({ page, filters,cookiePopupClosed }, testInfo) => {
+    test(`${productType.name} → Price Wrong Range Verification   `, async ({ page, filters,cookiePopupClosed }, testInfo) => {
       test.setTimeout(60000); 
       console.log(`Testing: ${productType.name}`);
 
@@ -243,6 +244,33 @@ test.describe('Product Filter Verification - Colour - All Products', () => {
       
        }
 
+    })
+  }
+});
+
+test.describe('Search Verification - All Product Brands', () => {
+  for (const productBrands of PRODUCT_BRANDS) {
+    test.only(`${productBrands.name} → Colour Filter Verification   `, async ({ page, filters,cookiePopupClosed }, testInfo) => {
+      test.setTimeout(60000); 
+      //await expect.poll(() => cookiePopupClosed.value, { timeout: 30_000 }).toBe(true);
+      console.log(`Testing: ${productBrands.name}`);
+      const count = productBrands.brands.length;
+      for(let i=0; i<count; i++){
+        filters.searchBox.fill(productBrands.brands[i]);
+        await filters.searchBox.press('Enter');
+
+
+        const currentURL = page.url();
+        const brandInURL = getBrandFromURL(currentURL);
+        console.log("brandInURL: ",brandInURL);
+        console.log("Brand name: ", productBrands.brands[i]);
+
+        expect(brandInURL).toBe(productBrands.brands[i]);
+
+
+        //await expect(page).toHaveURL(new RegExp(`${productBrands.brands[i]}`));
+
+      }
     })
   }
 });
